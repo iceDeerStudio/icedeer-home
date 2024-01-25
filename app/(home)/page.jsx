@@ -1,14 +1,23 @@
 import Header from '@/components/home/header'
 import Image from 'next/image'
 
-import Logo from '@/public/icedeer-font.svg'
 import banner from '@/public/banner.png'
 import banner1 from '@/public/banner1.jpg'
 import contact from '@/public/contact.png'
 import wechat from '@/public/wechat.jpg'
+
+import standardIllustration from '@/public/standard.svg'
+import rangeIllustration from '@/public/range.svg'
+import wideIllustration from '@/public/wide.svg'
+import designIllustration from '@/public/design.svg'
+import quatityIllustration from '@/public/quatity.svg'
+
+
 import TabColumn from '@/components/home/tab-column'
 import Banner from '@/components/home/banner'
 import ServeColumn from '@/components/home/serve-column'
+import Footer from '@/components/home/footer'
+import AdvantageColumn from '@/components/home/advantage-column'
 
 export default function HomePage() {
 
@@ -76,6 +85,33 @@ export default function HomePage() {
             image: wechat,
         },
     ]
+    const advantages = [
+        {
+            title: '标准化的开发流程',
+            description: 'iceDeer的开发工作基于专业的标准化开发流程。我们确保项目的每个阶段都经过详尽的计划和严格的控制，以提高项目的透明度、可追溯性与稳定性。',
+            image: standardIllustration,
+        },
+        {
+            title: '基于最新的技术方案',
+            description: 'iceDeer的开发工作采用行业最新的技术趋势。我们的技术范围包括但不限于云计算、人工智能、区块链等新兴技术。',
+            image: rangeIllustration,
+        },
+        {
+            title: '广泛的技术支持',
+            description: '不同的定制化项目往往需要基于不同的技术栈才能达到最优效果。iceDeer在客户端和服务端均拥有广泛的技术栈支持。',
+            image: wideIllustration,
+        },
+        {
+            title: '注重设计与用户体验',
+            description: '设计和用户体验是产品竞争力的关键体现。iceDeer注重使用精致、美观的设计，旨在提供极致的用户体验',
+            image: designIllustration,
+        },
+        {
+            title: '高效率与高质量',
+            description: 'iceDeer通过严格的质量控制流程和高效的项目管理，兼顾效率与质量。我们通过开发可扩展、高复用的优质代码，确保项目能够及时响应客户需求的变化。',
+            image: quatityIllustration,
+        },
+    ]
 
     return (
         <div className=" w-full min-h-full">
@@ -83,38 +119,7 @@ export default function HomePage() {
             <Banner data={banners} />
             <ServeColumn serves={serves} />
             <TabColumn tabs={tabs} />
-            <section className='py-20 bg-secondaryBackground'>
-                <div className='useMax'>
-                    <h2 className='w-full text-center text-3xl font-semibold mb-6'>我们的优势</h2>
-                    <div className='w-full flex flex-col text-lg'>
-                        <p className=''>
-                            创新
-                            我们认为，技术可以并且应该成为追求美好的力量，有意义的创新可以并且必将在大大小小的方面塑造更光明的世界。
-                        </p>
-                        <p>
-                            多元化和包容性
-                            我们在多样化的声音中茁壮成长。 我们利用员工和客户的经验、优势和不同观点来充实、挑战和拓展我们的思维。 这就是我们的创新方式。
-                        </p>
-                        <p>
-                            公司的社会责任
-                            我们相信技术是造福人类的强大力量，并且正在努力创造一个可持续未来，使每个人都可以享受到技术带来的好处和机会。
-                        </p>
-                        <p>
-                            AI
-                            我们相信，在以人为本的设计中，AI 可以扩展你的能力，解放你的思维，让你自由进行更具创造性和策略性的尝试，帮助你或你的组织达成更多成就。
-                        </p>
-                        <p>
-                            共同应对 COVID-19 疫情
-                            在全世界都在应对 COVID-19 疫情之际，我们正努力尽自己的一份力量，确保员工的安全，努力保护我们运营的社区的健康和福祉，并向客户提供技术、提示和资源。
-                        </p>
-                        <p>
-                            值得信赖的计算
-                            了解我们如何基于健全的商业惯例提供安全、专属且可靠的计算体验。
-                        </p>
-                    </div>
-                </div>
-
-            </section>
+            <AdvantageColumn advantages={advantages} />
             <section className='bg-primary py-14'>
                 <div className='useMax flex flex-row gap-12 text-white'>
                     <Image src={contact} height={240} />
@@ -125,14 +130,7 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
-            <footer className='bg-secondaryBackgroun py-8'>
-                <div className='useMax flex flex-col'>
-                    <div className='flex flex-row justify-between items-center'>
-                        <Image src={Logo} height={24} />
-                        <p className='text-sm'>© 2024 iceDeer</p>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div>
     )
 }
