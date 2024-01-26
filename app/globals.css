@@ -12,20 +12,20 @@
 
 @font-face {
   font-family: 'HarmonyOSHans-Regular';
-  src: url('/public/font/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
+  src: url('/font/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HarmonyOSHans-Medium';
-  src: url('/public/font/HarmonyOS_Sans_SC_Medium.ttf') format('truetype');
+  src: url('/font/HarmonyOS_Sans_SC_Medium.ttf') format('truetype');
   font-weight: bolder;
   font-style: normal;
 }
 
 body {
-  font-family: "HarmonyOSHans-Regular","HarmonyOSHans-Medium";
+  font-family: "HarmonyOSHans-Regular", "HarmonyOSHans-Medium";
   color: rgb(var(--primary));
   background: rgb(var(--background));
 }
@@ -37,4 +37,44 @@ body {
   margin-right: auto;
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+.useBannerImgFa {
+  perspective: 4000px;
+}
+
+.useBannerImg-enter {
+  opacity: 0;
+  transform: translateY(80%) rotateX(-90deg) translateZ(50px);
+  transform-style: preserve-3d;
+}
+
+.useBannerImg-enter-done {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+  transform-style: preserve-3d;
+  transition: 1s cubic-bezier(.67, 0, .32, 1) opacity, 1s cubic-bezier(.67, 0, .32, 1) transform;
+}
+
+.useBannerImg-exit-done {
+  opacity: 0;
+  transform: rotateX(33deg) translateY(-33%) translateZ(50px);
+  transition: 350ms linear opacity, 1s ease-out transform;
+}
+
+.useBannerText-enter {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.useBannerText-enter-done {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 500ms cubic-bezier(.67, 0, .32, 1) opacity 500ms, 500ms cubic-bezier(.67, 0, .32, 1) transform 500ms;
+}
+
+.useBannerText-exit-done {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: 1s cubic-bezier(.67, 0, .32, 1) opacity, 1s cubic-bezier(.67, 0, .32, 1) transform;
 }

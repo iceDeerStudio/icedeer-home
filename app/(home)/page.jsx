@@ -2,6 +2,7 @@ import Header from '@/components/home/header'
 import Image from 'next/image'
 
 import banner from '@/public/banner.jpg'
+import banner1 from '@/public/banner1.jpg'
 import contact from '@/public/contact.png'
 import wechat from '@/public/wechat.jpg'
 
@@ -17,6 +18,7 @@ import Banner from '@/components/home/banner'
 import ServeColumn from '@/components/home/serve-column'
 import Footer from '@/components/home/footer'
 import AdvantageColumn from '@/components/home/advantage-column'
+import StepColumn from '@/components/home/step-column'
 
 export default function HomePage() {
 
@@ -39,7 +41,12 @@ export default function HomePage() {
             title: '注重设计、质量与效率',
             content: '为您提供极致的软件定制服务',
             image: banner,
-        }
+        },
+        {
+            title: '我们的使命是',
+            content: '为您提供极致的软件定制服务',
+            image: banner1,
+        },
     ]
     const tabs = [
         {
@@ -111,6 +118,40 @@ export default function HomePage() {
             image: quatityIllustration,
         },
     ]
+    const steps = [
+        {
+            title: '需求分析',
+            content: ['初步沟通', '详细讨论', '确定开发方案', '签订合同',],
+        },
+        {
+            title: '产品原型设计',
+            content: ['界面交互设计','原型DEMO'],
+        },
+        {
+            title: '产品UI设计',
+            content: ['设计稿'],
+        },
+        {
+            title: '开发阶段',
+            content: ['架构设计','界面布局','功能实现','数据对接'],
+        },
+        {
+            title: '测试',
+            content: ['单元测试','真机测试','功能测试','测试跟踪','测试报告'],
+        },
+        {
+            title: '验收',
+            content: [],
+        },
+        {
+            title: '部署上线',
+            content: ['正式发布'],
+        },
+        {
+            title: '后期维护',
+            content: ['及时跟进','帮助客户','维护工作'],
+        },
+    ]
 
     return (
         <div className=" w-full min-h-full">
@@ -119,6 +160,7 @@ export default function HomePage() {
             <ServeColumn serves={serves} />
             <TabColumn tabs={tabs} />
             <AdvantageColumn advantages={advantages} />
+            <StepColumn steps={steps} />
             <section className='useMax py-lg'>
                 <div className='flex p-md rounded-xl bg-primary flex-row justify-between text-white'>
                     <div className='flex flex-col justify-center gap-3'>
