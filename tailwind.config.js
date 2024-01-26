@@ -13,7 +13,17 @@ module.exports = {
         secondary: 'rgb(var(--secondary) / <alpha-value>)',
         secondaryBackground: 'rgb(var(--secondaryBackground) / <alpha-value>)',
         divider: 'rgb(var(--divider) / <alpha-value>)',
-      }
+      },
+      padding: {
+        lg: '4rem',
+        md: '2rem',
+        sm: '1rem',
+      },
+      margin: {
+        lg: '4rem',
+        md: '2rem',
+        sm: '1rem',
+      },
     },
   },
   plugins: [],

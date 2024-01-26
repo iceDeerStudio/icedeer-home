@@ -12,21 +12,29 @@
 
 @font-face {
   font-family: 'HarmonyOSHans-Regular';
-  src: url(https://developer.harmonyos.com/cn/docs/assets/font/HarmonyOSHans-Regular.woff2);
+  src: url('/public/font/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'HarmonyOSHans-Medium';
+  src: url('/public/font/HarmonyOS_Sans_SC_Medium.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
 
 body {
-  font-family: 'HarmonyOSHans-Regular';
+  font-family: "HarmonyOSHans-Regular","HarmonyOSHans-Medium";
   color: rgb(var(--primary));
   background: rgb(var(--background));
 }
 
 
 .useMax {
-  max-width: 1280px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }

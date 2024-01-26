@@ -1,8 +1,7 @@
 import Header from '@/components/home/header'
 import Image from 'next/image'
 
-import banner from '@/public/banner.png'
-import banner1 from '@/public/banner1.jpg'
+import banner from '@/public/banner.jpg'
 import contact from '@/public/contact.png'
 import wechat from '@/public/wechat.jpg'
 
@@ -37,9 +36,9 @@ export default function HomePage() {
     ]
     const banners = [
         {
-            title: '我们的使命是',
-            content: '提供极致的软件定制服务',
-            image: banner1,
+            title: '注重设计、质量与效率',
+            content: '为您提供极致的软件定制服务',
+            image: banner,
         }
     ]
     const tabs = [
@@ -120,14 +119,14 @@ export default function HomePage() {
             <ServeColumn serves={serves} />
             <TabColumn tabs={tabs} />
             <AdvantageColumn advantages={advantages} />
-            <section className='bg-primary py-14'>
-                <div className='useMax flex flex-row gap-12 text-white'>
-                    <Image src={contact} height={240} />
+            <section className='useMax py-lg'>
+                <div className='flex p-md rounded-xl bg-primary flex-row justify-between text-white'>
                     <div className='flex flex-col justify-center gap-3'>
                         <h2 className='font-semibold text-4xl'>获取方案报价</h2>
                         <p className='text-xl'>有合作意向或定制需求？立即添加我们的客服微信咨询，免费获取定制化解决方案及报价</p>
-                        <button className='outline-none rounded-lg border-2 transition-colors mt-2 hover:bg-white hover:text-primary self-baseline px-4 py-2'>立即咨询</button>
+                        <button className='outline-none rounded-lg border-2 transition-colors mt-2 border-background hover:bg-background hover:text-primary self-baseline px-4 py-2'>立即咨询</button>
                     </div>
+                    <Image src={contact} height={240} />
                 </div>
             </section>
             <Footer />

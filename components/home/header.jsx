@@ -13,24 +13,24 @@ export default function Header({ pages }) {
     }
 
     return (
-        <header className=" sticky top-0 left-0 border-b border-divider bg-background z-50">
-            <div className='useMax flex flex-row justify-between'>
-                <Image className='py-5' src={Logo} height={30} />
+        <header className=" sticky top-0 left-0 border-b border-divider h-16 bg-background z-50">
+            <div className='useMax h-full flex flex-row justify-between'>
+                <Image className='' src={Logo} height={28} />
                 <div className='flex flex-row items-center'>
                     {pages.map(page => (
-                        <div key={page.route} className='h-full px-5 flex flex-row justify-center items-center group cursor-pointer'>
-                            <a
-                                href={page.route}
+                        <a key={page.route} href={page.route} className='h-full outline-none px-6 flex flex-row justify-center items-center group cursor-pointer'>
+                            <div
                                 className={cn(
-                                    'flex flex-row items-center h-full font-semibold pt-2 border-b-4 border-transparent transition-colors outline-none',
+                                    'flex flex-row items-center h-full font-semibold pt-2 border-b-4 border-transparent transition-colors',
                                     matchPath(page.route) ? ' border-primary' : 'group-hover:border-divider'
                                 )}
                             >
                                 {page.label}
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     ))}
-                    <button className=' ml-3 mt-1 px-3 py-2 rounded-full bg-primary text-background text-sm'>联系我们</button>
+                    <span className='block w-[1px] h-6 bg-divider ml-2 mr-6'></span>
+                    <button className=' px-3 py-1 rounded-md bg-primary text-background'>联系我们</button>
                 </div>
             </div>
         </header>
