@@ -2,13 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary: 51 51 51;
-  --background: 255 255 255;
-  --secondary: 70 90 105;
-  --secondaryBackground: 242 242 242;
-  --divider: 228 228 231;
+@layer base {
+    :root {
+        --primary: 51 51 51;
+        --background: 255 255 255;
+        --secondary: 70 90 105;
+        --secondaryBackground: 242 242 242;
+        --divider: 228 228 231;
+      
+        --main: #1e3a8a;
+        --minor: #1f2937;
+        --shadow: #6b7280;
+        --bg-1: #fff;
+        --bg-2: #f9fafb;
+      }
 }
+
+@layer components {
+    .use-shadow {
+        @apply shadow-[2px_4px_12px_rgba(23,37,84,.04)];
+    }
+}
+
 
 @font-face {
   font-family: 'HarmonyOSHans-Regular';
@@ -27,9 +42,8 @@
 body {
   font-family: "HarmonyOSHans-Regular", "HarmonyOSHans-Medium";
   color: rgb(var(--primary));
-  background: rgb(var(--background));
+  background: rgb(var(--main));
 }
-
 
 .useMax {
   max-width: 1440px;

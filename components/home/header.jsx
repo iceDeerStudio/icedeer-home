@@ -1,8 +1,7 @@
 "use client"
 
 import { cn } from '@/lib/cn'
-import Logo from '@/public/icedeer-font.svg'
-import Image from 'next/image'
+import IcedeerFontSvg from './icedeer-font-svg'
 
 import { usePathname } from 'next/navigation'
 
@@ -13,24 +12,24 @@ export default function Header({ pages }) {
     }
 
     return (
-        <header className=" sticky top-0 left-0 border-b border-divider h-16 bg-background z-50">
-            <div className='useMax h-full flex flex-row justify-between'>
-                <Image className='' src={Logo} height={28} />
-                <div className='flex flex-row items-center'>
+        <header className=" sticky top-0 left-0 use-shadow border-minor/5 h-16 bg-bg1 z-50">
+            <div className='useMax h-full flex'>
+                <IcedeerFontSvg className='h-6 my-auto mr-auto text-main' />
+                <div className='flex items-center text-sm gap-4'>
                     {pages.map(page => (
-                        <a key={page.route} href={page.route} className='h-full outline-none px-6 flex flex-row justify-center items-center group cursor-pointer'>
+                        <a key={page.route} href={page.route}>
                             <div
                                 className={cn(
-                                    'flex flex-row items-center h-full font-semibold pt-2 border-b-4 border-transparent transition-colors',
-                                    matchPath(page.route) ? ' border-primary' : 'group-hover:border-divider'
+                                    'block hover:bg-blue-800/5 px-4 h-9 leading-9 font-bold text-minor transition-colors duration-300 rounded',
+                                    matchPath(page.route) ? 'text-main' : ''
                                 )}
                             >
                                 {page.label}
                             </div>
                         </a>
                     ))}
-                    <span className='block w-[1px] h-6 bg-divider ml-2 mr-6'></span>
-                    <button className=' px-3 py-1 rounded-md bg-primary text-background'>联系我们</button>
+                    <span className='w-[0.5px] h-7 bg-slate-900/20'></span>
+                    <button className='px-4 h-9 rounded bg-minor text-bg1'>联系我们</button>
                 </div>
             </div>
         </header>

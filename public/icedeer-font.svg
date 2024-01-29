@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="a" data-name="icedeer-font" xmlns="http://www.w3.org/2000/svg" width="181.27" height="30" viewBox="0 0 181.27 30">
+<svg id="a" data-name="icedeer-font" xmlns="http://www.w3.org/2000/svg" width="181.27" height="30" viewBox="0 0 181.27 30" fill="currentColor" stroke="currentColor">
   <defs>
-    <style>
-      .b {
-        fill: #333;
-      }
-    </style>
   </defs>
   <path class="b" d="M11.75,27.11c0,.92,.03,1.82,.09,2.71H2.91c-.13-.89-.2-1.79-.2-2.71,0-3.46,.97-6.69,2.66-9.43,1.86,1.8,4.14,3.26,6.69,4.29-.2,1.64-.31,3.36-.31,5.15Z"/>
   <path class="b" d="M38.86,27.11c0,.92-.07,1.83-.2,2.71h-8.92c.06-.89,.09-1.79,.09-2.71,0-1.78-.11-3.51-.31-5.15,2.55-1.02,4.83-2.49,6.69-4.29,1.69,2.75,2.66,5.98,2.66,9.43Z"/>

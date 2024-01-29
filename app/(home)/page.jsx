@@ -81,7 +81,12 @@ export default function HomePage() {
             image: wechat,
         },
         {
-            title: 'Web网站/后台开发',
+            title: 'Web网站开发',
+            description: '提供专业、高效的Web网站或稳定、可靠的后台系统开发服务。我们拥有丰富的经验和技术实力，注重用户体验、安全性和可扩展性，确保客户的网站或后台系统在各方面都能够脱颖而出。',
+            image: wechat,
+        },
+        {
+            title: '后台系统开发',
             description: '提供专业、高效的Web网站或稳定、可靠的后台系统开发服务。我们拥有丰富的经验和技术实力，注重用户体验、安全性和可扩展性，确保客户的网站或后台系统在各方面都能够脱颖而出。',
             image: wechat,
         },
@@ -154,7 +159,7 @@ export default function HomePage() {
     ]
 
     return (
-        <div className=" w-full min-h-full">
+        <div className=" w-full min-h-full bg-bg2">
             <Header pages={pages} />
             <Banner data={banners} />
             <ServeColumn serves={serves} />
