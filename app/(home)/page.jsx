@@ -4,7 +4,7 @@ import Image from 'next/image'
 import banner from '@/public/banner.jpg'
 import banner1 from '@/public/banner1.jpg'
 import contact from '@/public/contact.png'
-import wechat from '@/public/wechat.jpg'
+import wechat from '@/public/wx.svg'
 
 import standardIllustration from '@/public/standard.svg'
 import rangeIllustration from '@/public/range.svg'
@@ -29,11 +29,27 @@ export default function HomePage() {
         },
         {
             route: '/products',
-            label: '案例',
+            label: '业务范围',
         },
         {
             route: '/contact',
-            label: '合作与支持',
+            label: '应用领域',
+        },
+        {
+            route: '/contact',
+            label: '我们的优势',
+        },
+        {
+            route: '/contact',
+            label: '服务流程',
+        },
+        {
+            route: '/contact',
+            label: '团队介绍',
+        },
+        {
+            route: '/contact',
+            label: '关于我们',
         },
     ]
     const banners = [

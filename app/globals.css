@@ -14,13 +14,16 @@
         --minor: #1f2937;
         --shadow: #6b7280;
         --bg-1: #fff;
-        --bg-2: #f9fafb;
+        --bg-2: #f3f4f6;
       }
 }
 
 @layer components {
     .use-shadow {
         @apply shadow-[2px_4px_12px_rgba(23,37,84,.04)];
+    }
+    .use-blur {
+        @apply  bg-white/80 backdrop-blur-lg;
     }
 }
 

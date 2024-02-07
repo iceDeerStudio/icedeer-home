@@ -13,7 +13,7 @@ export default function Banner({ data }) {
         setActiveBanner(1)
         const timer = setInterval(() => {
             setActiveBanner(prev => prev + 1 === data.length ? 0 : prev + 1)
-        }, 5000)
+        }, 10000)
 
         return () => clearInterval(timer)
     }, [])
