@@ -36,19 +36,19 @@ export default function HomePage() {
             label: '应用领域',
         },
         {
-            route: '/contact',
+            route: '/contact1',
             label: '我们的优势',
         },
         {
-            route: '/contact',
+            route: '/contact2',
             label: '服务流程',
         },
         {
-            route: '/contact',
+            route: '/contact3',
             label: '团队介绍',
         },
         {
-            route: '/contact',
+            route: '/contact4',
             label: '关于我们',
         },
     ]
