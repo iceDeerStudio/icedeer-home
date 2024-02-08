@@ -3,49 +3,45 @@ import { cn } from '@/lib/cn'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
-import { CSSTransition } from 'react-transition-group'
 
 export default function Banner({ data }) {
     const [activeBanner, setActiveBanner] = useState(0)
-    const [loaded, setLoaded] = useState(false)
+    const [switched, setSwitched] = useState(true)
+
+    const handleSwitchBanner = (index) => {
+        setSwitched(prev => !prev)
+        setActiveBanner(index)
+    }
 
     useEffect(() => {
-        setActiveBanner(1)
         const timer = setInterval(() => {
-            setActiveBanner(prev => prev + 1 === data.length ? 0 : prev + 1)
-        }, 10000)
+            setActiveBanner(prev => prev >= data.length - 1 ? 0 : prev + 1)
+        }, 6000)
 
         return () => clearInterval(timer)
-    }, [])
-
-    useEffect(() => {
-        if (!loaded) setLoaded(true)
-    }, [activeBanner])
+    }, [switched])
 
     return (
-        <div className='w-full useMax h-[calc(100vh-4rem)]'>
-            <div className={cn('h-full flex flex-row relative',!loaded && ' transition-opacity opacity-0')}>
-                <div className='flex flex-col w-1 justify-center gap-2 z-10'>
+        <div className='w-full useMax h-[calc(100vh-16rem)]'>
+            <div className={cn('h-full relative rounded overflow-hidden')}>
+                <div className='absolute bottom-4 left-1/2 translate-x-[-50%] flex h-1 justify-center gap-2 z-20'>
                     {Array(data.length).fill(0).map((_, index) => (
-                        <span key={index} onClick={() => setActiveBanner(index)} className={cn('cursor-pointer h-16 w-1 bg-shadow', activeBanner === index && 'bg-main')}></span>
+                        <span key={index} onClick={() => handleSwitchBanner(index)} className={cn('cursor-pointer w-12 h-1 bg-bg1', activeBanner === index && 'bg-main')}></span>
                     ))}
                 </div>
                 {data.map((banner, index) => (
-                    <div key={banner.title} className='absolute w-full h-full top-0 left-0 flex-1 flex  gap-8'>
-                        <CSSTransition appear={true} timeout={1} in={index === activeBanner} classNames="useBannerText">
-                            <div className=' flex flex-col justify-center px-md'>
-                                <p className='text-main font-bold text-5xl pb-4'>{banner.title}</p>
-                                <p className='text-minor text-2xl pb-4'>{banner.content}</p>
-                                <button className='self-baseline px-4 h-10 rounded bg-minor text-bg1'>了解更多</button>
-                            </div>
-                        </CSSTransition>
-                        <div className='flex flex-col justify-right items-end flex-1 py-lg useBannerImgFa'>
-                            <CSSTransition timeout={1} in={index === activeBanner} classNames="useBannerImg">
-                                <Image className='use-shadow rounded' height={720} src={banner.image} />
-                            </CSSTransition>
+                    <div key={banner.title} className={cn(
+                        'absolute w-full h-full opacity-0 z-0 transition-all duration-500',
+                        index === activeBanner && "z-10 opacity-100",
+                    )}>
+                        <div className=' absolute left-0 top-1/2 ml-md translate-y-[-50%] z-20'>
+                            <h1 className='text-white text-4xl font-bold'>{banner.title}</h1>
+                            <p className='text-zinc-100 text-xl mt-xs'>{banner.content}</p>
                         </div>
+                        <Image src={banner.image} fill className=' object-cover' />
                     </div>
                 ))}
+
             </div>
         </div>
     )

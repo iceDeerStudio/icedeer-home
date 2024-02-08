@@ -24,11 +24,13 @@ module.exports = {
         lg: '4rem',
         md: '2rem',
         sm: '1rem',
+        xs: '0.5rem',
       },
       margin: {
         lg: '4rem',
         md: '2rem',
         sm: '1rem',
+        xs: '0.5rem',
       },
     },
   },

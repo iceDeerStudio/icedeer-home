@@ -11,7 +11,7 @@ export default function ServeColumn({ serves }) {
                 {serves.map(serve => (
                     <div key={serve.title} className='group w-full aspect-[3/4] overflow-hidden use-shadow rounded cursor-default'>
                         <div className='relative w-full h-full'>
-                            <Image className='absolute top-0 left-0 w-full h-full group-hover:[transform:scale3d(1.2,1.2,1.2)] transition-[transform] duration-[400ms]' src={serve.image} />
+                            <Image alt={"我们的服务" + serve.title} className='absolute top-0 left-0 w-full h-full group-hover:[transform:scale3d(1.2,1.2,1.2)] transition-[transform] duration-[400ms]' src={serve.image} />
                             <div className='absolute top-0 left-0 w-full h-full mt-[100%] group-hover:mt-0 use-blur transition-[margin-top] duration-[400ms]'>
                                 <div className='flex w-full aspect-[3/1]'>
                                     <div className='flex m-auto '>

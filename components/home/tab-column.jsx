@@ -20,7 +20,7 @@ export default function TabColumn({ tabs }) {
                     <div className="flex flex-row gap-2 p-[1rem_1rem_0_1rem] ">
                         {tabs.map((tab, index) => (
                             <span
-                                key={index}
+                                key={tab.title}
                                 onClick={() => selectTab(index)}
                                 className={cn(
                                     "cursor-pointer text-shadow bg-blue-900/5 px-4 py-2 rounded transition-colors",
@@ -33,7 +33,7 @@ export default function TabColumn({ tabs }) {
                     </div>
                     <div className="flex p-4">
                         <div className="w-1/2">
-                            <Image className="rounded" src={applicationImg} />
+                            <Image alt="应用领域" className="rounded" src={applicationImg} />
                         </div>
                         <div className="w-1/2 p-8">
                             <h3 className="block text-3xl text-minor font-bold mb-8">{tabs[selectedTab].title}</h3>

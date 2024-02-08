@@ -189,7 +189,7 @@ export default function HomePage() {
                         <p className='text-xl'>有合作意向或定制需求？立即添加我们的客服微信咨询，免费获取定制化解决方案及报价</p>
                         <button className='outline-none rounded-lg border-2 transition-colors mt-2 border-background hover:bg-background hover:text-primary self-baseline px-4 py-2'>立即咨询</button>
                     </div>
-                    <Image src={contact} height={240} />
+                    <Image alt='即刻联系我们' src={contact} height={240} />
                 </div>
             </section>
             <Footer />

@@ -1,6 +1,8 @@
+import { Fragment } from "react";
+
 export default function StepColumn({ steps }) {
     return (
-        <section className='bg-secondaryBackground py-lg'>
+        <section className='py-lg'>
             <div className="useMax relative">
                 <h2 className='w-full text-center text-3xl font-semibold pb-md'>服务流程</h2>
                 <p className=' text-center text-lg pb-md'>
@@ -18,12 +20,12 @@ export default function StepColumn({ steps }) {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center mt-sm">
-                                <span className="h-8 w-8 leading-8 rounded-full text-center bg-primary text-background text-lg">{index}</span>
+                                <span className="h-8 w-8 leading-8 rounded-full text-center bg-primary text-background text-lg mb-1">{index}</span>
                                 {step.content.map(v => (
-                                    <>
+                                    <Fragment key={v}>
                                         <span className=" w-2 h-2 border-r-2 border-b-2 rotate-45 border-primary"></span>
                                         <p className=" pt-1">{v}</p>
-                                    </>
+                                    </Fragment>
                                 ))}
                             </div>
                         </div>

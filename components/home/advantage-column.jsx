@@ -10,9 +10,9 @@ export default function AdvantageColumn({ advantages }) {
                 </p>
                 <div className='w-full flex flex-col'>
                     {advantages.map(advantage => (
-                        <div key={advantage.title} className="flex flex-row items-center py-md border-t border-divider last:border-b">
+                        <div key={"优势" + advantage.title} className="flex flex-row items-center py-md border-t border-divider last:border-b">
                             <div className=' h-[260px] min-w-[300px] flex flex-row justify-center items-center'>
-                                <Image height={200} src={advantage.image} />
+                                <Image alt={advantage.title} height={200} src={advantage.image} />
                             </div>
                             <div className='flex flex-col justify-center pl-lg'>
                                 <h3 className=' text-2xl mb-sm text-primary'>{advantage.title}</h3>
