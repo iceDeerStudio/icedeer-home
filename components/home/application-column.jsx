@@ -6,11 +6,11 @@ import { useState } from "react"
 import applicationImg from '@/public/application.png'
 import Image from 'next/image'
 
-export default function TabColumn({ tabs }) {
+export default function ApplicationColumn({ applications }) {
     const [selectedTab, selectTab] = useState(0);
 
     return (
-        <section className='py-lg'>
+        <section id="application" className='py-lg'>
             <div className="useMax">
                 <h2 className='w-full text-center text-4xl text-main font-bold mb-md'>应用领域示例</h2>
                 <p className='text-center text-shadow text-lg mb-md'>
@@ -18,16 +18,16 @@ export default function TabColumn({ tabs }) {
                 </p>
                 <div className="rounded bg-bg1 use-shadow">
                     <div className="flex flex-row gap-2 p-[1rem_1rem_0_1rem] ">
-                        {tabs.map((tab, index) => (
+                        {applications.map((application, index) => (
                             <span
-                                key={tab.title}
+                                key={application.title}
                                 onClick={() => selectTab(index)}
                                 className={cn(
                                     "cursor-pointer text-shadow bg-blue-900/5 px-4 py-2 rounded transition-colors",
                                     selectedTab === index ? "bg-main text-white" : "hover:bg-blue-900/10"
                                 )}
                             >
-                                {tab.title}
+                                {application.title}
                             </span>
                         ))}
                     </div>
@@ -36,8 +36,8 @@ export default function TabColumn({ tabs }) {
                             <Image alt="应用领域" className="rounded" src={applicationImg} />
                         </div>
                         <div className="w-1/2 p-8">
-                            <h3 className="block text-3xl text-minor font-bold mb-8">{tabs[selectedTab].title}</h3>
-                            <p className="block text-lg text-shadow ">{tabs[selectedTab].content}</p>
+                            <h3 className="block text-3xl text-minor font-bold mb-8">{applications[selectedTab].title}</h3>
+                            <p className="block text-lg text-shadow ">{applications[selectedTab].content}</p>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,12 @@
-import Header from '@/components/home/header'
 import Image from 'next/image'
+
+import Header from '@/components/home/header'
+import ApplicationColumn from '@/components/home/application-column'
+import Banner from '@/components/home/banner'
+import ServeColumn from '@/components/home/serve-column'
+import Footer from '@/components/home/footer'
+import AdvantageColumn from '@/components/home/advantage-column'
+import StepColumn from '@/components/home/step-column'
 
 import banner from '@/public/banner.jpg'
 import banner1 from '@/public/banner1.jpg'
@@ -13,13 +20,6 @@ import designIllustration from '@/public/design.svg'
 import quatityIllustration from '@/public/quatity.svg'
 
 
-import TabColumn from '@/components/home/tab-column'
-import Banner from '@/components/home/banner'
-import ServeColumn from '@/components/home/serve-column'
-import Footer from '@/components/home/footer'
-import AdvantageColumn from '@/components/home/advantage-column'
-import StepColumn from '@/components/home/step-column'
-
 export default function HomePage() {
 
     const pages = [
@@ -28,19 +28,19 @@ export default function HomePage() {
             label: '首页',
         },
         {
-            route: '/products',
+            route: '#serve',
             label: '业务范围',
         },
         {
-            route: '/contact',
+            route: '#application',
             label: '应用领域',
         },
         {
-            route: '/contact1',
+            route: '#advantage',
             label: '我们的优势',
         },
         {
-            route: '/contact2',
+            route: '#step',
             label: '服务流程',
         },
         {
@@ -64,7 +64,7 @@ export default function HomePage() {
             image: banner1,
         },
     ]
-    const tabs = [
+    const applications = [
         {
             title: '电商',
             content: '为在线零售商提供全方位的电商解决方案，包括网站搭建、支付集成、订单管理等功能，助力客户实现线上业务的持续增长。',
@@ -95,21 +95,25 @@ export default function HomePage() {
             title: '小程序开发',
             description: '提供全面的小程序开发服务。支持微信、支付宝，快应用等平台，满足客户对于轻量级、高效的移动应用的需求。从界面设计到后端支持，我们确保小程序在各个方面都能实现客户的期望，并提供极致的用户体验。',
             image: wechat,
+            icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24a2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24a2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"></path></svg>,
         },
         {
             title: 'Web网站开发',
             description: '提供专业、高效的Web网站或稳定、可靠的后台系统开发服务。我们拥有丰富的经验和技术实力，注重用户体验、安全性和可扩展性，确保客户的网站或后台系统在各方面都能够脱颖而出。',
             image: wechat,
+            icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M16.36 14c.08-.66.14-1.32.14-2c0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2c0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2c0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2c0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg>,
         },
         {
             title: '后台系统开发',
             description: '提供专业、高效的Web网站或稳定、可靠的后台系统开发服务。我们拥有丰富的经验和技术实力，注重用户体验、安全性和可扩展性，确保客户的网站或后台系统在各方面都能够脱颖而出。',
             image: wechat,
+            icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4s8-1.79 8-4s-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>,
         },
         {
             title: '桌面应用开发',
             description: '提供基于Windows系统的桌面应用定制开发服务。包括企业级的管理软件和创新的桌面应用，我们都能够满足客户的定制需求。',
             image: wechat,
+            icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6a2 2 0 0 0-2-2m0 14H5V8h14z"></path></svg>,
         },
     ]
     const advantages = [
@@ -146,7 +150,7 @@ export default function HomePage() {
         },
         {
             title: '产品原型设计',
-            content: ['界面交互设计','原型DEMO'],
+            content: ['界面交互设计', '原型DEMO'],
         },
         {
             title: '产品UI设计',
@@ -154,11 +158,11 @@ export default function HomePage() {
         },
         {
             title: '开发阶段',
-            content: ['架构设计','界面布局','功能实现','数据对接'],
+            content: ['架构设计', '界面布局', '功能实现', '数据对接'],
         },
         {
             title: '测试',
-            content: ['单元测试','真机测试','功能测试','测试跟踪','测试报告'],
+            content: ['单元测试', '真机测试', '功能测试', '测试跟踪', '测试报告'],
         },
         {
             title: '验收',
@@ -170,7 +174,7 @@ export default function HomePage() {
         },
         {
             title: '后期维护',
-            content: ['及时跟进','帮助客户','维护工作'],
+            content: ['及时跟进', '帮助客户', '维护工作'],
         },
     ]
 
@@ -179,7 +183,7 @@ export default function HomePage() {
             <Header pages={pages} />
             <Banner data={banners} />
             <ServeColumn serves={serves} />
-            <TabColumn tabs={tabs} />
+            <ApplicationColumn applications={applications} />
             <AdvantageColumn advantages={advantages} />
             <StepColumn steps={steps} />
             <section className='useMax py-lg'>

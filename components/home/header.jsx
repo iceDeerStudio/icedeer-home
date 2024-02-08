@@ -8,24 +8,50 @@ import { useEffect, useState } from 'react'
 
 export default function Header({ pages }) {
     const [fade, setFade] = useState(true)
+    const [activePage, setActivePage] = useState(null)
 
     const pathname = usePathname()
     const matchPath = (path) => {
-        return path === pathname
+        if (path.indexOf('#') !== -1) {
+            return path.substring(1) == activePage
+        }
+        return path == pathname
     }
 
     useEffect(() => {
-        const listener = () => {
-            if (!fade && window.scrollY <= 16) {
+        const handleScroll = () => {
+            if (!fade && window.scrollY <= 32) {
+                setActivePage(null)
                 setFade(true)
-            } else if (fade && window.scrollY > 16) {
+            } else if (fade && window.scrollY > 32) {
                 setFade(false)
             }
         }
-        document.addEventListener("scroll", listener)
+        document.addEventListener("scroll", handleScroll)
 
-        return () => removeEventListener("scroll", listener)
+        return () => removeEventListener("scroll", handleScroll)
     }, [fade])
+
+    useEffect(() => {
+        const handleScroll = () => {
+            for (const page of pages) {
+                if (page.route.indexOf('#') === -1) {
+                    continue;
+                }
+                const id = page.route.substring(1)
+                const dom = document.getElementById(id)
+                const rect = dom.getBoundingClientRect()
+
+                if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+                    setActivePage(id)
+                    break;
+                }
+            }
+        }
+        document.addEventListener("scroll", handleScroll)
+
+        return () => removeEventListener("scroll", handleScroll)
+    }, [])
 
     return (
         <header className={cn(

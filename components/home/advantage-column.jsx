@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function AdvantageColumn({ advantages }) {
     return (
-        <section className='py-lg'>
+        <section id='advantage' className='py-lg'>
             <div className='useMax'>
                 <h2 className='w-full text-center text-3xl font-semibold mb-md'>为什么选择我们</h2>
                 <p className='text-shadow text-center text-lg mb-md'>
