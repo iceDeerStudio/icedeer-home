@@ -4,7 +4,7 @@ export default function AdvantageColumn({ advantages }) {
     return (
         <section id='advantage' className='py-lg'>
             <div className='useMax'>
-                <h2 className='w-full text-center text-3xl font-semibold mb-md'>为什么选择我们</h2>
+                <h2 className='w-full text-center text-4xl text-main font-bold mb-md'>为什么选择我们</h2>
                 <p className='text-shadow text-center text-lg mb-md'>
                     我们的优势十分明显。我们拥有最先进的开发技术和理念，兼具效率与质量，旨在为您提供最优质的服务。
                 </p>

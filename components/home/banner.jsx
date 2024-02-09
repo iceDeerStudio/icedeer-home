@@ -22,11 +22,17 @@ export default function Banner({ data }) {
     }, [switched])
 
     return (
-        <div className='w-full useMax h-[calc(100vh-16rem)]'>
+        <div id='banner' className='w-full useMax h-[calc(100vh-16rem)]'>
             <div className={cn('h-full relative rounded overflow-hidden')}>
                 <div className='absolute bottom-4 left-1/2 translate-x-[-50%] flex h-1 justify-center gap-2 z-20'>
                     {Array(data.length).fill(0).map((_, index) => (
-                        <span key={index} onClick={() => handleSwitchBanner(index)} className={cn('cursor-pointer w-12 h-1 bg-bg1', activeBanner === index && 'bg-main')}></span>
+                        <span key={index}
+                            onClick={() => handleSwitchBanner(index)}
+                            className={cn(
+                                'cursor-pointer w-12 h-1 bg-bg1',
+                                activeBanner === index && 'bg-main'
+                            )}
+                        ></span>
                     ))}
                 </div>
                 {data.map((banner, index) => (
@@ -38,7 +44,7 @@ export default function Banner({ data }) {
                             <h1 className='text-white text-4xl font-bold'>{banner.title}</h1>
                             <p className='text-zinc-100 text-xl mt-xs'>{banner.content}</p>
                         </div>
-                        <Image src={banner.image} fill className=' object-cover' />
+                        <Image alt={banner.title} src={banner.image} fill className=' object-cover' />
                     </div>
                 ))}
 

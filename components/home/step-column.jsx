@@ -4,7 +4,7 @@ export default function StepColumn({ steps }) {
     return (
         <section id="step" className='py-lg'>
             <div className="useMax relative">
-                <h2 className='w-full text-center text-3xl font-semibold pb-md'>服务流程</h2>
+                <h2 className='w-full text-center text-4xl text-main font-bold mb-md'>服务流程</h2>
                 <p className=' text-center text-lg pb-md'>
                     iceDeer通过扎实严谨的项目流程，精研细磨，匠心出精品
                 </p>

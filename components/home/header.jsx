@@ -3,25 +3,41 @@
 import { cn } from '@/lib/cn'
 import IcedeerFontSvg from './icedeer-font-svg'
 
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 export default function Header({ pages }) {
     const [fade, setFade] = useState(true)
     const [activePage, setActivePage] = useState(null)
 
+    const router = useRouter()
     const pathname = usePathname()
+
     const matchPath = (path) => {
         if (path.indexOf('#') !== -1) {
             return path.substring(1) == activePage
         }
         return path == pathname
     }
+    const handleNavigate = (route) => {
+        if (route.indexOf('#') === -1) {
+            router.push(route)
+            return
+        }
+        const dom = document.getElementById(route.substring(1))
+        window.scrollTo({
+            top: dom.offsetTop - 64,
+            behavior: 'smooth',
+        })
 
+    }
+    
     useEffect(() => {
         const handleScroll = () => {
             if (!fade && window.scrollY <= 32) {
-                setActivePage(null)
+                setActivePage(
+                    pages.find(page => page.route.indexOf('') !== -1).route.substring(1)
+                )
                 setFade(true)
             } else if (fade && window.scrollY > 32) {
                 setFade(false)
@@ -62,10 +78,10 @@ export default function Header({ pages }) {
                 <IcedeerFontSvg className='h-6 text-main' />
                 <span className='w-[1px] h-6 ml-4 bg-slate-900/20'></span>
                 {pages.map(page => (
-                    <a key={page.route} href={page.route}>
+                    <a key={page.route} onClick={() => handleNavigate(page.route)}>
                         <div
                             className={cn(
-                                'block hover:bg-blue-800/5 px-4 h-9 leading-9 font-bold text-minor rounded',
+                                'block hover:bg-blue-800/5 px-4 h-9 leading-9 font-bold text-minor rounded select-none',
                                 matchPath(page.route) ? 'text-main' : 'text-minor'
                             )}
                         >
