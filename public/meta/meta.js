@@ -358,35 +358,39 @@ const steps = useDataCollection(
     [
         {
             title: '需求分析',
-            content: ['初步沟通', '详细讨论', '确定开发方案', '签订合同'],
+            content: ['初步沟通', '详细讨论', '确定开发方案'],
         },
         {
-            title: '产品原型设计',
-            content: ['界面交互设计', '原型DEMO'],
+            title: '签署合同',
+            content: ['明确双方权益'],
         },
         {
-            title: '产品UI设计',
-            content: ['设计稿'],
+            title: '原型设计',
+            content: ['交付原型设计稿'],
         },
         {
-            title: '开发阶段',
-            content: ['架构设计', '界面布局', '功能实现', '数据对接'],
+            title: 'UI设计',
+            content: ['交付UI设计稿'],
+        },
+        {
+            title: '程序开发',
+            content: ['客户端开发', '服务端开发', '数据库设计', 'API接口对接'],
         },
         {
             title: '测试',
-            content: ['单元测试', '真机测试', '功能测试', '测试跟踪', '测试报告'],
+            content: ['功能测试', '测试文档'],
         },
         {
             title: '验收',
-            content: [],
+            content: ['最终成品确认'],
         },
         {
-            title: '部署上线',
-            content: ['正式发布'],
+            title: '交付',
+            content: ['交付软件源代码', '交付开发文档', '协助部署上线'],
         },
         {
             title: '后期维护',
-            content: ['及时跟进', '帮助客户', '维护工作'],
+            content: ['及时跟进', '免费维护180天'],
         },
     ],
 )

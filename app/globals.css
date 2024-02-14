@@ -28,6 +28,9 @@
     .use-max {
         @apply max-w-[1440px] mx-auto;
     }
+    .use-hover {
+        @apply hover:[transform:scale3d(1.05,1.05,1.05)];
+    }
 }
 
 

@@ -22,7 +22,7 @@ export default function Header({ data }) {
     }, [switched])
 
     return (
-        <div id='header' className='useMax h-[calc(100vh-16rem)] w-full'>
+        <div id='header' className='useMax h-[calc(100vh-4rem)] w-full pb-16'>
             <div className={cn('relative h-full overflow-hidden rounded')}>
                 <div className='absolute bottom-4 left-1/2 z-20 flex h-1 translate-x-[-50%] justify-center gap-2'>
                     {Array(data.length)
