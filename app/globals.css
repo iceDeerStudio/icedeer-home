@@ -25,19 +25,22 @@
     .use-blur {
         @apply  bg-white/80 backdrop-blur-lg;
     }
+    .use-max {
+        @apply max-w-[1440px] mx-auto;
+    }
 }
 
 
 @font-face {
   font-family: 'HarmonyOSHans-Regular';
-  src: url('/font/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
+  src: url('/fonts/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HarmonyOSHans-Medium';
-  src: url('/font/HarmonyOS_Sans_SC_Medium.ttf') format('truetype');
+  src: url('/fonts/HarmonyOS_Sans_SC_Medium.ttf') format('truetype');
   font-weight: bolder;
   font-style: normal;
 }

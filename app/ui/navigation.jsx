@@ -1,25 +1,25 @@
-"use client"
+'use client'
 
-import { cn } from '@/lib/cn'
-import IcedeerFontSvg from './icedeer-font-svg'
+import { cn } from '@/app/lib/cn'
+import IcedeerFontSvg from '../../public/icedeer-font-svg'
 
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-export default function Header({ pages }) {
+export default function Navigation({ pages }) {
     const [fade, setFade] = useState(true)
     const [activePage, setActivePage] = useState(null)
 
     const router = useRouter()
     const pathname = usePathname()
 
-    const matchPath = (path) => {
+    const matchPath = path => {
         if (path.indexOf('#') !== -1) {
             return path.substring(1) == activePage
         }
         return path == pathname
     }
-    const handleNavigate = (route) => {
+    const handleNavigate = route => {
         if (route.indexOf('#') === -1) {
             router.push(route)
             return
@@ -29,30 +29,27 @@ export default function Header({ pages }) {
             top: dom.offsetTop - 64,
             behavior: 'smooth',
         })
-
     }
-    
+
     useEffect(() => {
         const handleScroll = () => {
             if (!fade && window.scrollY <= 32) {
-                setActivePage(
-                    pages.find(page => page.route.indexOf('') !== -1).route.substring(1)
-                )
+                setActivePage(pages.find(page => page.route.indexOf('') !== -1).route.substring(1))
                 setFade(true)
             } else if (fade && window.scrollY > 32) {
                 setFade(false)
             }
         }
-        document.addEventListener("scroll", handleScroll)
+        document.addEventListener('scroll', handleScroll)
 
-        return () => removeEventListener("scroll", handleScroll)
+        return () => removeEventListener('scroll', handleScroll)
     }, [fade])
 
     useEffect(() => {
         const handleScroll = () => {
             for (const page of pages) {
                 if (page.route.indexOf('#') === -1) {
-                    continue;
+                    continue
                 }
                 const id = page.route.substring(1)
                 const dom = document.getElementById(id)
@@ -60,38 +57,39 @@ export default function Header({ pages }) {
 
                 if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
                     setActivePage(id)
-                    break;
+                    break
                 }
             }
         }
-        document.addEventListener("scroll", handleScroll)
+        document.addEventListener('scroll', handleScroll)
 
-        return () => removeEventListener("scroll", handleScroll)
+        return () => removeEventListener('scroll', handleScroll)
     }, [])
 
     return (
-        <header className={cn(
-            "sticky top-0 left-0 h-16 z-50 transition-all",
-            fade ? "bg-bg2" : "use-shadow border-minor/5 bg-bg1"
-        )}>
-            <div className='useMax h-full flex items-center gap-4 text-sm'>
+        <header
+            className={cn(
+                'sticky left-0 top-0 z-50 h-16 transition-all',
+                fade ? 'bg-bg2' : 'use-shadow border-minor/5 bg-bg1',
+            )}
+        >
+            <div className='useMax flex h-full items-center gap-4 text-sm'>
                 <IcedeerFontSvg className='h-6 text-main' />
-                <span className='w-[1px] h-6 ml-4 bg-slate-900/20'></span>
+                <span className='ml-4 h-6 w-[1px] bg-slate-900/20'></span>
                 {pages.map(page => (
                     <a key={page.route} onClick={() => handleNavigate(page.route)}>
                         <div
                             className={cn(
-                                'block hover:bg-blue-800/5 px-4 h-9 leading-9 font-bold text-minor rounded select-none',
-                                matchPath(page.route) ? 'text-main' : 'text-minor'
+                                'block h-9 select-none rounded px-4 font-bold leading-9 text-minor hover:bg-blue-800/5',
+                                matchPath(page.route) ? 'text-main' : 'text-minor',
                             )}
                         >
                             {page.label}
                         </div>
                     </a>
                 ))}
-                <button className='px-4 h-9 ml-auto rounded bg-minor text-bg1'>联系我们</button>
+                <button className='ml-auto h-9 rounded bg-minor px-4 text-bg1'>联系我们</button>
             </div>
         </header>
-
     )
 }
