@@ -2,9 +2,9 @@ import Image from 'next/image'
 
 import contact from '@/public/images/contact.png'
 
-import { header, service, stacks, applications, advantages, steps } from '@/public/meta/meta'
+import { header, service, stacks, applications, advantages, steps, about } from '@/public/meta/meta'
 
-import { Header, Service, Stacks, Applications, Advantages, Steps } from '@/app/ui/home/index'
+import { Header, Service, Stacks, Applications, Advantages, Steps, About } from '@/app/ui/home/index'
 
 export default function Home() {
     return (
@@ -15,6 +15,7 @@ export default function Home() {
             <Applications data={applications} />
             <Advantages data={advantages} />
             <Steps data={steps} />
+            <About data={about}></About>
             <section className='useMax py-lg'>
                 <div className='flex flex-row justify-between rounded-xl bg-primary p-md text-white'>
                     <div className='flex flex-col justify-center gap-3'>

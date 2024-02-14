@@ -27,10 +27,10 @@ const routes = [
         route: '#steps',
         label: '服务流程',
     },
-    // {
-    //     route: '#about',
-    //     label: '关于我们',
-    // },
+    {
+        route: '#about',
+        label: '关于我们',
+    },
 ]
 
 const header = useDataCollection('header', '', '', [
@@ -53,8 +53,12 @@ const service = useDataCollection(
     [
         {
             title: '小程序开发',
-            description:
-                '提供全面的小程序开发服务。支持微信、支付宝，快应用等平台，满足客户对于轻量级、高效的移动应用的需求。从界面设计到后端支持，我们确保小程序在各个方面都能实现客户的期望，并提供极致的用户体验。',
+            description: [
+                '提供全面的小程序开发服务。',
+                '支持微信、支付宝、快应用等平台。',
+                '采用C/S架构，支持深度定制。',
+                '适用于轻量级、高效的移动跨平台需求。',
+            ],
             image: wxPic,
             icon: (
                 <svg xmlns='http://www.w3.org/2000/svg' width='22' viewBox='0 0 101.5 101.5'>
@@ -64,8 +68,13 @@ const service = useDataCollection(
         },
         {
             title: 'Web网站开发',
-            description:
-                '提供专业、高效的Web网站或稳定、可靠的后台系统开发服务。我们拥有丰富的经验和技术实力，注重用户体验、安全性和可扩展性，确保客户的网站或后台系统在各方面都能够脱颖而出。',
+            description: [
+                '提供专业、稳定、高度定制化的网站开发服务。',
+                '兼容市场各大主流浏览器。',
+                '采用B/S架构，大幅提升网站的性能与可扩展性。',
+                '支持适配手机、平板等移动设备。',
+                '适用于各类企业或个人建站需求。',
+            ],
             image: wxPic,
             icon: (
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
@@ -78,8 +87,12 @@ const service = useDataCollection(
         },
         {
             title: '后台系统开发',
-            description:
-                '提供专业、高效的Web网站或稳定、可靠的后台系统开发服务。我们拥有丰富的经验和技术实力，注重用户体验、安全性和可扩展性，确保客户的网站或后台系统在各方面都能够脱颖而出。',
+            description: [
+                '提供稳定、可靠、高度可扩展的后台系统开发服务。',
+                '使用经过市场验证的主流技术栈。',
+                '满足高并发、可维护、可扩展需求。',
+                '适用于各类企业系统构建、各类个人数据系统构建。',
+            ],
             image: wxPic,
             icon: (
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
@@ -92,8 +105,12 @@ const service = useDataCollection(
         },
         {
             title: '桌面应用开发',
-            description:
-                '提供基于Windows系统的桌面应用定制开发服务。包括企业级的管理软件和创新的桌面应用，我们都能够满足客户的定制需求。',
+            description: [
+                '提供高性能的Windows平台桌面应用开发服务。',
+                '兼容主流版本的Windows系统。',
+                '采用B/S架构，提供极致的用户体验。',
+                '适用于各类企业或个人桌面软件定制需求。',
+            ],
             image: wxPic,
             icon: (
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
@@ -149,10 +166,7 @@ const stacks = useDataCollection(
             title: 'Vue.js',
             icon: (
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
-                    <path
-                        fill='currentColor'
-                        d='M2 3h3.5L12 15l6.5-12H22L12 21zm4.5 0h3L12 7.58L14.5 3h3L12 13.08z'
-                    ></path>
+                    <path fill='currentColor' d='M2 3h3.5L12 15l6.5-12H22L12 21zm4.5 0h3L12 7.58L14.5 3h3L12 13.08z'></path>
                 </svg>
             ),
         },
@@ -285,7 +299,7 @@ const stacks = useDataCollection(
     ],
 )
 
-const applications = useDataCollection('applications', '应用领域', '', [
+const applications = useDataCollection('applications', '应用领域', '应用领域介绍', [
     {
         title: '电商',
         content:
@@ -293,28 +307,23 @@ const applications = useDataCollection('applications', '应用领域', '', [
     },
     {
         title: '社区平台',
-        content:
-            '打造强大的社区平台，包括论坛、社交功能、用户管理等，为客户建立一个互动活跃、用户参与度高的社区。',
+        content: '打造强大的社区平台，包括论坛、社交功能、用户管理等，为客户建立一个互动活跃、用户参与度高的社区。',
     },
     {
         title: '视频应用',
-        content:
-            '提供高效的视频应用开发服务，包括视频分享平台、直播应用等，以满足客户在数字娱乐领域的创新需求。',
+        content: '提供高效的视频应用开发服务，包括视频分享平台、直播应用等，以满足客户在数字娱乐领域的创新需求。',
     },
     {
         title: '即时通讯',
-        content:
-            '开发安全、高效的即时通讯软件，涵盖个人聊天、群组通讯等功能，确保用户能够在实时交流中获得卓越的体验。',
+        content: '开发安全、高效的即时通讯软件，涵盖个人聊天、群组通讯等功能，确保用户能够在实时交流中获得卓越的体验。',
     },
     {
         title: '教育',
-        content:
-            '为教育机构提供创新的教育科技解决方案，包括在线课程管理、学生跟踪系统等，助力教育行业实现数字化转型。',
+        content: '为教育机构提供创新的教育科技解决方案，包括在线课程管理、学生跟踪系统等，助力教育行业实现数字化转型。',
     },
     {
         title: '生活服务',
-        content:
-            '开发便捷、实用的生活服务应用，涵盖预约服务、本地生活信息等，为用户提供更加便利的生活体验。',
+        content: '开发便捷、实用的生活服务应用，涵盖预约服务、本地生活信息等，为用户提供更加便利的生活体验。',
     },
 ])
 
@@ -340,8 +349,7 @@ const advantages = useDataCollection(
         },
         {
             title: '注重设计与用户体验',
-            description:
-                '设计和用户体验是产品竞争力的关键体现。iceDeer注重使用精致、美观的设计，旨在提供极致的用户体验',
+            description: '设计和用户体验是产品竞争力的关键体现。iceDeer注重使用精致、美观的设计，旨在提供极致的用户体验',
         },
         {
             title: '高效率与高质量',
@@ -351,49 +359,46 @@ const advantages = useDataCollection(
     ],
 )
 
-const steps = useDataCollection(
-    'steps',
-    '服务流程',
-    'iceDeer通过扎实严谨的项目流程，精研细磨，匠心出精品',
-    [
-        {
-            title: '需求分析',
-            content: ['初步沟通', '详细讨论', '确定开发方案'],
-        },
-        {
-            title: '签署合同',
-            content: ['明确双方权益'],
-        },
-        {
-            title: '原型设计',
-            content: ['交付原型设计稿'],
-        },
-        {
-            title: 'UI设计',
-            content: ['交付UI设计稿'],
-        },
-        {
-            title: '程序开发',
-            content: ['客户端开发', '服务端开发', '数据库设计', 'API接口对接'],
-        },
-        {
-            title: '测试',
-            content: ['功能测试', '测试文档'],
-        },
-        {
-            title: '验收',
-            content: ['最终成品确认'],
-        },
-        {
-            title: '交付',
-            content: ['交付软件源代码', '交付开发文档', '协助部署上线'],
-        },
-        {
-            title: '后期维护',
-            content: ['及时跟进', '免费维护180天'],
-        },
-    ],
-)
+const steps = useDataCollection('steps', '服务流程', 'iceDeer通过扎实严谨的项目流程，精研细磨，匠心出精品', [
+    {
+        title: '需求分析',
+        content: ['初步沟通', '详细讨论', '确定开发方案'],
+    },
+    {
+        title: '签署合同',
+        content: ['明确双方权益'],
+    },
+    {
+        title: '原型设计',
+        content: ['交付原型设计稿'],
+    },
+    {
+        title: 'UI设计',
+        content: ['交付UI设计稿'],
+    },
+    {
+        title: '程序开发',
+        content: ['客户端开发', '服务端开发', '数据库设计', 'API接口对接'],
+    },
+    {
+        title: '测试',
+        content: ['功能测试', '测试文档'],
+    },
+    {
+        title: '验收',
+        content: ['最终成品确认'],
+    },
+    {
+        title: '交付',
+        content: ['交付软件源代码', '交付开发文档', '协助部署上线'],
+    },
+    {
+        title: '后期维护',
+        content: ['及时跟进', '免费维护180天'],
+    },
+])
+
+const about = useDataCollection('about', '关于我们', '关于我们介绍', [])
 
 function useDataCollection(componentId, title, introduction, content) {
     return {
@@ -406,4 +411,4 @@ function useDataCollection(componentId, title, introduction, content) {
     }
 }
 
-export { routes, header, service, stacks, applications, advantages, steps }
+export { routes, header, service, stacks, applications, advantages, steps, about }

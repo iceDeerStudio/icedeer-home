@@ -4,5 +4,6 @@ import Stacks from './stacks'
 import Applications from './applications'
 import Advantages from './advantages'
 import Steps from './steps'
+import About from './about'
 
-export { Header, Service, Stacks, Applications, Advantages, Steps }
+export { Header, Service, Stacks, Applications, Advantages, Steps, About }

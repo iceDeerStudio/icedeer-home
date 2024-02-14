@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Fragment } from 'react'
 
 import Container from './container'
 
@@ -28,7 +29,16 @@ export default function Service({ data }) {
                                         </h3>
                                     </div>
                                 </div>
-                                <p className='px-8 text-shadow'>{element.description}</p>
+                                <div className='flex flex-col gap-4 px-8 opacity-0 transition-[opacity] duration-[400ms] group-hover:opacity-100'>
+                                    {element.description.map((tip, index) => (
+                                        <div className='flex' key={index}>
+                                            <div className='my-2 mr-2 h-2 w-2 flex-shrink-0 rounded-sm bg-shadow opacity-50'></div>
+                                            <p className='text-justify leading-6 text-shadow'>
+                                                {tip}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>

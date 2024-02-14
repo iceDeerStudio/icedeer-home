@@ -17,7 +17,7 @@ module.exports = {
     vueIndentScriptAndStyle: false,
     proseWrap: 'preserve',
     insertPragma: false,
-    printWidth: 100,
+    printWidth: 128,
     requirePragma: false,
     tabWidth: 4,
     useTabs: false,

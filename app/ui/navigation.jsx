@@ -80,7 +80,7 @@ export default function Navigation({ pages }) {
                     <a key={page.route} onClick={() => handleNavigate(page.route)}>
                         <div
                             className={cn(
-                                'block h-9 cursor-pointer rounded px-4 font-bold leading-9 text-minor hover:bg-blue-800/5 hover:text-main',
+                                'block h-9 cursor-pointer rounded px-4 font-bold leading-9 text-minor hover:bg-blue-800/5',
                                 matchPath(page.route) ? 'text-main' : 'text-shadow',
                             )}
                         >
