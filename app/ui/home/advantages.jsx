@@ -3,19 +3,11 @@ import Container from './container'
 export default function Advantages({ data }) {
     return (
         <Container {...data.meta}>
-            <div className='flex w-full flex-col'>
+            <div className='grid w-full grid-cols-2 gap-8 '>
                 {data.content.map(advantage => (
-                    <div
-                        key={'优势' + advantage.title}
-                        className='flex flex-row items-center border-t border-divider py-md last:border-b'
-                    >
-                        <div className='flex h-[260px] min-w-[300px] flex-row items-center justify-center'>
-                            {/* <Image alt={advantage.title} height={200} src={advantage.image} /> */}
-                        </div>
-                        <div className='flex flex-col justify-center pl-lg'>
-                            <h3 className=' mb-sm text-2xl text-primary'>{advantage.title}</h3>
-                            <p className='text-md text-secondary'>{advantage.description}</p>
-                        </div>
+                    <div key={advantage.title} className='use-shadow flex flex-col gap-2 rounded bg-white p-md'>
+                        <h3 className='text-xl font-bold text-minor'>{advantage.title}</h3>
+                        <p className='text-md text-shadow'>{advantage.description}</p>
                     </div>
                 ))}
             </div>
