@@ -466,6 +466,11 @@ const steps = useDataCollection('steps', '服务流程', 'iceDeer通过扎实严
 
 const about = useDataCollection('about', '关于我们', '关于我们介绍', [])
 
+const ad = {
+    title: '即刻联系，免费咨询获取开发方案',
+    content: ['有软件定制需求？寻找长期合作伙伴？或想深入了解我们的团队？立即添加我们的负责人微信，解答您的任何疑问！'],
+}
+
 const follows = [
     {
         platform: 'facebook',
@@ -552,4 +557,4 @@ function useDataCollection(componentId, title, introduction, content) {
     }
 }
 
-export { routes, header, service, stacks, applications, advantages, steps, about, follows }
+export { routes, header, service, stacks, applications, advantages, steps, about, follows, ad }
