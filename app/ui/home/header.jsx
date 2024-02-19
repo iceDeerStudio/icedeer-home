@@ -22,7 +22,7 @@ export default function Header({ data }) {
     }, [switched])
 
     return (
-        <div id='header' className='useMax h-[calc(100vh-4rem)] w-full pb-16'>
+        <div id='header' className='use-max px-lg h-[calc(100vh-4rem)] w-full pb-16'>
             <div className={cn('relative h-full overflow-hidden rounded')}>
                 <div className='absolute bottom-4 left-1/2 z-20 flex h-1 translate-x-[-50%] justify-center gap-2'>
                     {Array(data.length)
@@ -31,10 +31,7 @@ export default function Header({ data }) {
                             <span
                                 key={index}
                                 onClick={() => handleSwitchBanner(index)}
-                                className={cn(
-                                    'h-1 w-12 cursor-pointer bg-bg1',
-                                    activeBanner === index && 'bg-main',
-                                )}
+                                className={cn('h-1 w-12 cursor-pointer bg-bg1', activeBanner === index && 'bg-main')}
                             ></span>
                         ))}
                 </div>
@@ -50,12 +47,7 @@ export default function Header({ data }) {
                             <h1 className='text-4xl font-bold text-white'>{banner.title}</h1>
                             <p className='mt-xs text-xl text-zinc-100'>{banner.content}</p>
                         </div>
-                        <Image
-                            alt={banner.title}
-                            src={banner.image}
-                            fill
-                            className=' object-cover'
-                        />
+                        <Image alt={banner.title} src={banner.image} fill className=' object-cover' />
                     </div>
                 ))}
             </div>

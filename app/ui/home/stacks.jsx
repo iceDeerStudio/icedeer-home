@@ -7,9 +7,9 @@ export default function Stacks({ data }) {
                 {data.content.map(tech => (
                     <div
                         key={tech.title}
-                        className='use-shadow flex h-24 select-none items-center gap-4 rounded bg-white px-md'
+                        className='use-shadow hover:use-shadow-lg group flex h-24 select-none items-center gap-4 rounded bg-white px-md transition-shadow duration-300'
                     >
-                        <div className='h-10 w-10'>{tech.icon}</div>
+                        <div className='h-10 w-10 transition-all duration-300 group-hover:h-11 group-hover:w-11'>{tech.icon}</div>
                         <p className='font-bold'>{tech.title}</p>
                     </div>
                 ))}

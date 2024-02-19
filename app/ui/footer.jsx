@@ -4,11 +4,11 @@ import Navigator from '@/components/navigator'
 export default function Footer({ pages, follows }) {
     return (
         <footer className='select-none bg-minor py-16'>
-            <div className='useMax flex flex-col text-white'>
+            <div className='use-max px-lg flex flex-col text-white'>
                 <div className='mb-16 flex leading-8'>
                     <IcedeerFontSvg className='my-auto h-6' />
                     {follows.map(follow => (
-                        <a key={follow.platform} href={follow.link} className='ml-12 h-8 w-8 text-white'>
+                        <a key={follow.platform} href={follow.link} target='_blank' className='ml-12 h-8 w-8 text-white'>
                             {follow.icon}
                         </a>
                     ))}

@@ -1,6 +1,6 @@
 import './globals.css'
 
-import { routes, follows } from '@/public/meta/meta'
+import { routes, follows, contacts } from '@/public/meta/meta'
 
 import Navigation from './ui/navigation'
 import Footer from './ui/footer'
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang='en'>
             <body suppressHydrationWarning={true}>
-                <Navigation pages={routes} />
+                <Navigation pages={routes} contacts={contacts} />
                 {children}
                 <Footer pages={routes} follows={follows} />
             </body>

@@ -17,7 +17,7 @@ export default function Steps({ data }) {
                             </div>
                         </div>
                         <div className='flex flex-col items-center gap-2'>
-                            <span className='mb-2 h-8 w-8 rounded-full bg-minor text-center text-lg leading-8 text-background'>
+                            <span className='mb-2 h-8 w-8 rounded-full bg-minor text-center text-lg leading-8 text-bg1'>
                                 {index}
                             </span>
                             {step.content.map((v, index) => (

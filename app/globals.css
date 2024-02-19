@@ -4,12 +4,6 @@
 
 @layer base {
     :root {
-        --primary: 51 51 51;
-        --background: 255 255 255;
-        --secondary: 70 90 105;
-        --secondaryBackground: 242 242 242;
-        --divider: 228 228 231;
-      
         --main: #1e3a8a;
         --minor: #1f2937;
         --shadow: #6b7280;
@@ -22,6 +16,9 @@
     .use-shadow {
         @apply shadow-[2px_4px_12px_rgba(23,37,84,.04)];
     }
+    .use-shadow-lg {
+        @apply shadow-[2px_3px_24px_rgba(23,37,84,.09)];
+    }
     .use-blur {
         @apply  bg-white/80 backdrop-blur-lg;
     }
@@ -30,6 +27,9 @@
     }
     .use-hover {
         @apply hover:[transform:scale3d(1.05,1.05,1.05)];
+    }
+    .use-underlineAnim{
+      background: linear-gradient(to right, var(--main), var(--main))no-repeat left bottom;
     }
 }
 
@@ -52,52 +52,4 @@ body {
   font-family: "HarmonyOSHans-Regular", "HarmonyOSHans-Medium";
   color: rgb(var(--primary));
   background: rgb(var(--main));
-}
-
-.useMax {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
-.useBannerImgFa {
-  perspective: 4000px;
-}
-
-.useBannerImg-enter {
-  opacity: 0;
-  transform: translateY(80%) rotateX(-90deg) translateZ(50px);
-  transform-style: preserve-3d;
-}
-
-.useBannerImg-enter-done {
-  opacity: 1;
-  transform: translateY(0) rotateX(0);
-  transform-style: preserve-3d;
-  transition: 1s cubic-bezier(.67, 0, .32, 1) opacity, 1s cubic-bezier(.67, 0, .32, 1) transform;
-}
-
-.useBannerImg-exit-done {
-  opacity: 0;
-  transform: rotateX(33deg) translateY(-33%) translateZ(50px);
-  transition: 350ms linear opacity, 1s ease-out transform;
-}
-
-.useBannerText-enter {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.useBannerText-enter-done {
-  opacity: 1;
-  transform: translateY(0);
-  transition: 500ms cubic-bezier(.67, 0, .32, 1) opacity 500ms, 500ms cubic-bezier(.67, 0, .32, 1) transform 500ms;
-}
-
-.useBannerText-exit-done {
-  opacity: 0;
-  transform: translateY(-40px);
-  transition: 1s cubic-bezier(.67, 0, .32, 1) opacity, 1s cubic-bezier(.67, 0, .32, 1) transform;
 }
