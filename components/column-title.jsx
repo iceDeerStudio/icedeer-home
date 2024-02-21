@@ -6,7 +6,7 @@ export default function Title({ route, title, white }) {
     const handleNavigate = () => {
         const dom = document.getElementById(route)
         window.scrollTo({
-            top: dom.offsetTop - 79,
+            top: dom.offsetTop - 72,
             behavior: 'smooth',
         })
     }
@@ -14,7 +14,7 @@ export default function Title({ route, title, white }) {
         <h2
             onClick={handleNavigate}
             className={cn(
-                'group mr-sm h-16 cursor-pointer whitespace-nowrap text-6xl font-bold leading-[64px]',
+                'group mr-sm h-16 cursor-pointer whitespace-nowrap text-5xl font-bold leading-[64px]',
                 !white && 'text-main',
             )}
         >

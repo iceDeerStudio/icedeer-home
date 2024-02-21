@@ -7,12 +7,12 @@ export default function Advantages({ data }) {
                 {data.content.map(advantage => (
                     <div
                         key={advantage.title}
-                        className='hover:use-shadow group flex cursor-default flex-col rounded border border-divider bg-bg1 p-md transition-all duration-300 hover:scale-105'
+                        className='hover:use-shadow use-hover group flex h-36 cursor-default flex-col rounded  border-divider bg-bg1 p-7 transition-all duration-[400ms]'
                     >
-                        <h3 className=' mb-2 text-3xl font-bold leading-8 text-minor transition-all duration-300 group-hover:text-main'>
+                        <h3 className='mb-3 text-2xl font-bold leading-8 text-minor transition-all duration-300 group-hover:text-main'>
                             {advantage.title}
                         </h3>
-                        <p className='text-font leading-8'>{advantage.description}</p>
+                        <p className='text-font'>{advantage.description}</p>
                     </div>
                 ))}
             </div>

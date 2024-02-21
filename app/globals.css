@@ -16,7 +16,7 @@
 
 @layer components {
     .use-shadow {
-        @apply shadow-[2px_4px_12px_rgba(23,37,84,.04)];
+        @apply shadow-[2px_4px_12px_rgba(34,68,204,.08)];
     }
     .use-shadow-lg {
         @apply shadow-[2px_3px_24px_rgba(23,37,84,.09)];
@@ -28,7 +28,7 @@
         @apply max-w-[1440px] mx-auto;
     }
     .use-hover {
-        @apply hover:[transform:scale3d(1.05,1.05,1.05)];
+        @apply hover:[transform:scale3d(1.04,1.04,1.04)];
     }
     .use-underlineAnim{
       background: linear-gradient(to right, var(--main), var(--main))no-repeat left bottom;

@@ -16,7 +16,7 @@ export default function Applications({ data }) {
             {...data.meta}
             white
             style={{ background: data.content[selectedTab].color }}
-            className='relative h-[calc(100vh-80px)] overflow-hidden'
+            className='relative h-[calc(100vh-4.5rem)] overflow-hidden'
         >
             <div className='flex flex-1'>
                 <div className='flex flex-1 flex-col text-bg1'>
@@ -43,7 +43,9 @@ export default function Applications({ data }) {
                     ))}
                     <div className='mt-auto flex flex-wrap gap-4'>
                         {data.content[selectedTab].tags.map(tag => (
-                            <p key={tag} className='leading-8'>#{tag}</p>
+                            <p key={tag} className='leading-8'>
+                                #{tag}
+                            </p>
                         ))}
                     </div>
                 </div>

@@ -24,12 +24,12 @@ export default function Overview({ data }) {
     return (
         <div id='header' className='h-screen w-full'>
             <div className='relative h-full w-full overflow-hidden'>
-                <div className='absolute top-1/2 right-0 z-20 flex flex-col w-1 translate-y-[-50%] gap-2'>
+                <div className='absolute right-0 top-1/2 z-20 flex w-1 translate-y-[-50%] flex-col gap-2'>
                     {data.map((_, index) => (
                         <span
                             key={index}
                             onClick={() => handleSwitchBanner(index)}
-                            className={cn('w-1 h-12 cursor-pointer bg-bg1', activeBanner === index && 'bg-main')}
+                            className={cn('h-12 w-1 cursor-pointer bg-bg1', activeBanner === index && 'bg-main')}
                         ></span>
                     ))}
                 </div>
@@ -42,7 +42,7 @@ export default function Overview({ data }) {
                         )}
                     >
                         <div className='absolute inset-0 z-20 py-lg'>
-                            <div className='relative use-max h-full w-full px-lg'>
+                            <div className='use-max relative h-full w-full px-lg'>
                                 <h1 className='absolute bottom-1/2 pb-md text-6xl font-bold text-bg1'>{banner.title}</h1>
                                 <main className='absolute top-1/2'>
                                     {banner.contents.map(content => (
@@ -53,7 +53,9 @@ export default function Overview({ data }) {
                                 </main>
                                 <div className='absolute bottom-0 flex flex-wrap gap-8'>
                                     {banner.tags.map(tag => (
-                                        <p key={tag} className='text-bg1 text-[24px] leading-8'>#{tag}</p>
+                                        <p key={tag} className='text-xl leading-8 text-bg1'>
+                                            # {tag}
+                                        </p>
                                     ))}
                                 </div>
                             </div>

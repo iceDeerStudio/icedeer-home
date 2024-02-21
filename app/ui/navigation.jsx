@@ -26,13 +26,17 @@ export default function Navigation({ pages, contacts }) {
     return (
         <header
             className={cn(
-                'fixed left-0 top-0 z-50 h-20 w-full transition-all duration-500',
-                fade ? 'h-[168px] bg-transparent py-lg text-bg1' : 'use-shadow text-font border-minor/5 bg-bg1',
+                'use-shadow fixed left-0 top-0 z-50 h-[4.5rem] w-full transition-all duration-[200ms]',
+                fade ? 'h-[168px] bg-transparent py-lg text-bg1' : 'use-shadow border-minor/5 bg-bg1 text-font',
             )}
         >
             <div className='use-max flex h-full items-center px-lg'>
-                <IcedeerFontSvg className=' mr-sm h-8 text-main' />
-                <Navigator pages={pages} match className='block h-8 cursor-pointer px-sm font-bold leading-8' />
+                <IcedeerFontSvg className=' mr-sm h-6 text-main' />
+                <Navigator
+                    pages={pages}
+                    match
+                    className='block h-8 cursor-pointer px-sm text-sm leading-8 hover:font-bold hover:text-main'
+                />
                 <button className='group relative ml-auto h-10 rounded bg-main px-md font-bold text-bg1'>
                     联系我们
                     <div className='use-shadow absolute right-0 top-0 grid w-0 grid-rows-[0fr] overflow-hidden rounded bg-bg1 text-minor opacity-0 transition-all duration-300 group-focus-within:w-48 group-focus-within:grid-rows-[1fr] group-focus-within:opacity-100'>

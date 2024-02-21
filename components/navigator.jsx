@@ -23,7 +23,7 @@ export default function Navigator({ pages, match, className }) {
         }
         const dom = document.getElementById(route.substring(1))
         window.scrollTo({
-            top: dom.offsetTop - 79,
+            top: dom.offsetTop - 72,
             behavior: 'smooth',
         })
     }
@@ -58,7 +58,7 @@ export default function Navigator({ pages, match, className }) {
         <a
             key={page.route}
             onClick={() => handleNavigate(page.route)}
-            className={cn(className, match && matchPath(page.route) && 'text-main')}
+            className={cn(className, match && matchPath(page.route) && 'font-bold text-main')}
         >
             {page.label}
         </a>
