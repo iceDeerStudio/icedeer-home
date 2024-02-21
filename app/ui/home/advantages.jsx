@@ -2,17 +2,17 @@ import Container from './container'
 
 export default function Advantages({ data }) {
     return (
-        <Container {...data.meta}>
+        <Container {...data.meta} className='bg-bg2'>
             <div className='grid w-full grid-cols-2 gap-8 '>
                 {data.content.map(advantage => (
                     <div
                         key={advantage.title}
-                        className='use-shadow hover:use-shadow-lg group flex cursor-default flex-col gap-2 rounded bg-white p-md transition-shadow duration-300'
+                        className='hover:use-shadow group flex cursor-default flex-col rounded border border-divider bg-bg1 p-md transition-all duration-300 hover:scale-105'
                     >
-                        <h3 className='use-underlineAnim self-baseline bg-[length:0_3px] text-xl font-bold text-minor transition-all duration-500 group-hover:bg-[length:100%_3px]'>
+                        <h3 className=' mb-2 text-3xl font-bold leading-8 text-minor transition-all duration-300 group-hover:text-main'>
                             {advantage.title}
                         </h3>
-                        <p className='text-md text-shadow'>{advantage.description}</p>
+                        <p className='text-font leading-8'>{advantage.description}</p>
                     </div>
                 ))}
             </div>

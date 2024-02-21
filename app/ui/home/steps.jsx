@@ -5,7 +5,7 @@ import Container from './container'
 export default function Steps({ data }) {
     return (
         <Container {...data.meta}>
-            <div className='use-shadow flex flex-row rounded bg-bg1 p-8'>
+            <div className='flex py-md'>
                 {data.content.map((step, index) => (
                     <div key={step.title} className='flex flex-1 flex-col'>
                         <div className='relative mb-6 flex h-10 flex-row items-center rounded-[0.25rem_1.25rem_1.25rem_0.25rem] bg-minor'>

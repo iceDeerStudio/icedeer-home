@@ -10,15 +10,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: 'rgb(var(--primary) / <alpha-value>)',
-                background: 'rgb(var(--background) / <alpha-value>)',
-                secondary: 'rgb(var(--secondary) / <alpha-value>)',
-                secondaryBackground: 'rgb(var(--secondaryBackground) / <alpha-value>)',
-                divider: 'rgb(var(--divider) / <alpha-value>)',
-
                 main: 'var(--main)',
                 minor: 'var(--minor)',
                 shadow: 'var(--shadow)',
+                divider: 'var(--divider)',
+                font: 'var(--font)',
                 bg1: 'var(--bg-1)',
                 bg2: 'var(--bg-2)',
             },

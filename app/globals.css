@@ -4,11 +4,13 @@
 
 @layer base {
     :root {
-        --main: #1e3a8a;
-        --minor: #1f2937;
+        --main: rgb(34, 68, 204);
+        --minor: rgb(34, 34, 45);
+        --font:rgb(156, 163, 175);
+        --divider:rgb(209, 213, 219);
         --shadow: #6b7280;
-        --bg-1: #fff;
-        --bg-2: #f3f4f6;
+        --bg-1: rgb(255, 255, 255);
+        --bg-2: rgb(243, 244, 246);
       }
 }
 
@@ -49,7 +51,6 @@
 }
 
 body {
-  font-family: "HarmonyOSHans-Regular", "HarmonyOSHans-Medium";
   color: rgb(var(--primary));
   background: rgb(var(--main));
 }

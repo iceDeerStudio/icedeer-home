@@ -1,4 +1,4 @@
-import Header from './header'
+import Overview from './overview'
 import Service from './service'
 import Stacks from './stacks'
 import Applications from './applications'
@@ -7,4 +7,4 @@ import Steps from './steps'
 import About from './about'
 import Ad from './ad'
 
-export { Header, Service, Stacks, Applications, Advantages, Steps, About, Ad }
+export { Overview, Service, Stacks, Applications, Advantages, Steps, About, Ad }

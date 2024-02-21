@@ -12,36 +12,43 @@ export default function Applications({ data }) {
     const [selectedTab, selectTab] = useState(0)
 
     return (
-        <Container {...data.meta}>
-            <div className='use-shadow rounded bg-bg1'>
-                <div className='flex flex-row gap-2 p-[1rem_1rem_0_1rem] '>
-                    {data.content.map((application, index) => (
-                        <span
-                            key={application.title}
-                            onClick={() => selectTab(index)}
-                            className={cn(
-                                'cursor-pointer rounded bg-blue-900/5 px-4 py-2 text-shadow transition-colors',
-                                selectedTab === index
-                                    ? 'bg-main text-white'
-                                    : 'hover:bg-blue-900/10',
-                            )}
-                        >
-                            {application.title}
-                        </span>
-                    ))}
-                </div>
-                <div className='flex p-4'>
-                    <div className='w-1/2'>
-                        <Image alt='应用领域' className='rounded' src={applicationImg} />
+        <Container
+            {...data.meta}
+            white
+            style={{ background: data.content[selectedTab].color }}
+            className='relative h-[calc(100vh-80px)] overflow-hidden'
+        >
+            <div className='flex flex-1'>
+                <div className='flex flex-1 flex-col text-bg1'>
+                    <div className='mb-md flex flex-wrap gap-4'>
+                        {data.content.map((application, index) => (
+                            <span
+                                key={application.title}
+                                onClick={() => selectTab(index)}
+                                className={cn(
+                                    'border-bg-1 h-8 cursor-pointer whitespace-nowrap rounded border border-bg1 bg-transparent px-sm leading-[30px] transition-colors',
+                                    selectedTab === index && 'bg-bg1',
+                                )}
+                                style={{ ...(selectedTab === index && { color: data.content[selectedTab].color }) }}
+                            >
+                                {application.title}
+                            </span>
+                        ))}
                     </div>
-                    <div className='w-1/2 p-8'>
-                        <h3 className='mb-8 block text-3xl font-bold text-minor'>
-                            {data.content[selectedTab].title}
-                        </h3>
-                        <p className='block text-lg text-shadow '>
-                            {data.content[selectedTab].content}
+                    <h3 className='mb-md block text-4xl font-bold'>{data.content[selectedTab].title}</h3>
+                    {data.content[selectedTab].contents.map(content => (
+                        <p key={content} className='leading-8'>
+                            {content}
                         </p>
+                    ))}
+                    <div className='mt-auto flex flex-wrap gap-4'>
+                        {data.content[selectedTab].tags.map(tag => (
+                            <p key={tag} className='leading-8'>#{tag}</p>
+                        ))}
                     </div>
+                </div>
+                <div className='flex flex-1 pl-md'>
+                    <Image alt='应用领域' className='object-cover' src={applicationImg} />
                 </div>
             </div>
         </Container>

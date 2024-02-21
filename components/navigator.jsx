@@ -23,7 +23,7 @@ export default function Navigator({ pages, match, className }) {
         }
         const dom = document.getElementById(route.substring(1))
         window.scrollTo({
-            top: dom.offsetTop - 64,
+            top: dom.offsetTop - 79,
             behavior: 'smooth',
         })
     }
@@ -38,7 +38,10 @@ export default function Navigator({ pages, match, className }) {
                 const dom = document.getElementById(id)
                 const rect = dom.getBoundingClientRect()
 
-                if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+                if (
+                    (rect.top >= 0 && rect.top < window.innerHeight / 2) ||
+                    (rect.bottom >= 0 && rect.bottom > window.innerHeight / 2)
+                ) {
                     setActivePage(id)
                     break
                 }

@@ -1,11 +1,11 @@
-import { header, service, stacks, applications, advantages, steps, about, ad } from '@/public/meta/meta'
+import { overviews, service, stacks, applications, advantages, steps, about, ad } from '@/public/meta/meta'
 
-import { Header, Service, Stacks, Applications, Advantages, Steps, About, Ad } from '@/app/ui/home/index'
+import { Overview, Service, Stacks, Applications, Advantages, Steps, About, Ad } from '@/app/ui/home/index'
 
 export default function Home() {
     return (
-        <div className=' min-h-full w-full bg-bg2'>
-            <Header data={header.content} />
+        <div className=' min-h-full w-full bg-bg1'>
+            <Overview data={overviews} />
             <Service data={service} />
             <Stacks data={stacks} />
             <Applications data={applications} />

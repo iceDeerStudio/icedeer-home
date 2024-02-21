@@ -9,7 +9,7 @@ const routes = [
     },
     {
         route: '#service',
-        label: '开发平台',
+        label: '业务范围',
     },
     {
         route: '#stacks',
@@ -84,23 +84,28 @@ const contacts = [
     },
 ]
 
-const header = useDataCollection('header', '', '', [
+const overviews = [
     {
-        title: '注重设计、质量与效率',
-        content: '为您提供极致的软件定制服务',
+        title: 'iceDeer软件开发工作室',
+        contents: ['注重设计、质量与效率', '为您提供极致的软件定制服务'],
+        tags: ['深度定制', '延期赔付', '开发进度周报', '180天免费维护'],
         image: banner,
     },
     {
-        title: '我们的使命是',
-        content: '为您提供极致的软件定制服务',
+        title: 'iceDeer软件开发工作室',
+        contents: ['注重设计、质量与效率', '为您提供极致的软件定制服务'],
+        tags: ['深度定制', '延期赔付', '开发进度周报', '180天免费维护'],
         image: banner1,
     },
-])
+]
 
 const service = useDataCollection(
     'service',
-    '开发平台',
-    'iceDeer致力于提供完整的定制软件开发服务。我们通过技术创新、最佳实践、以及标准化管理，为客户提供高质量、高效率、高度定制化的软件开发服务。',
+    '业务范围',
+    [
+        'iceDeer致力于提供完整的定制软件开发服务。',
+        '我们通过技术创新、最佳实践、以及标准化管理，为客户提供高质量、高效率、高度定制化的软件开发服务。',
+    ],
     [
         {
             title: '小程序开发',
@@ -178,7 +183,10 @@ const service = useDataCollection(
 const stacks = useDataCollection(
     'stacks',
     '技术支持',
-    'iceDeer拥有广阔的技术覆盖，为客户定制最符合业务需求的软件提供坚实基础。',
+    [
+        'iceDeer致力于提供完整的定制软件开发服务。',
+        '我们通过技术创新、最佳实践、以及标准化管理，为客户提供高质量、高效率、高度定制化的软件开发服务。',
+    ],
     [
         {
             title: 'JavaScript',
@@ -408,38 +416,98 @@ const stacks = useDataCollection(
     ],
 )
 
-const applications = useDataCollection('applications', '应用领域', '应用领域介绍', [
-    {
-        title: '电商',
-        content:
-            '为在线零售商提供全方位的电商解决方案，包括网站搭建、支付集成、订单管理等功能，助力客户实现线上业务的持续增长。',
-    },
-    {
-        title: '社区平台',
-        content: '打造强大的社区平台，包括论坛、社交功能、用户管理等，为客户建立一个互动活跃、用户参与度高的社区。',
-    },
-    {
-        title: '视频应用',
-        content: '提供高效的视频应用开发服务，包括视频分享平台、直播应用等，以满足客户在数字娱乐领域的创新需求。',
-    },
-    {
-        title: '即时通讯',
-        content: '开发安全、高效的即时通讯软件，涵盖个人聊天、群组通讯等功能，确保用户能够在实时交流中获得卓越的体验。',
-    },
-    {
-        title: '教育',
-        content: '为教育机构提供创新的教育科技解决方案，包括在线课程管理、学生跟踪系统等，助力教育行业实现数字化转型。',
-    },
-    {
-        title: '生活服务',
-        content: '开发便捷、实用的生活服务应用，涵盖预约服务、本地生活信息等，为用户提供更加便利的生活体验。',
-    },
-])
+const applications = useDataCollection(
+    'applications',
+    '应用领域',
+    [
+        'iceDeer致力于提供完整的定制软件开发服务。',
+        '我们通过技术创新、最佳实践、以及标准化管理，为客户提供高质量、高效率、高度定制化的软件开发服务。',
+    ],
+    [
+        {
+            title: '电商',
+            contents: ['适用于O2O、B2B、B2C、C2C,分销和B2B2C电子商务模式', '五端合一，微信小程序、APP、公众号、抖音头条小程序'],
+            tags: ['会员管理', '商品展示', '订单管理', '计费'],
+            color: 'rgb(15, 118, 110)',
+        },
+        {
+            title: '社区',
+            contents: [
+                '适金融新起点，安全大平台',
+                '定制App开发、支持IOS / 安卓双系统',
+                '支持商家端 / 客户端 双端开发',
+                '支持App+PC+web+微信四合一全网开发',
+            ],
+            tags: ['会员管理', '商品展示', '订单管理', '计费'],
+            color: '#0078d4',
+        },
+        {
+            title: '视频',
+            contents: ['适用于O2O、B2B、B2C、C2C,分销和B2B2C电子商务模式', '五端合一，微信小程序、APP、公众号、抖音头条小程序'],
+            tags: ['会员管理', '商品展示', '订单管理', '计费'],
+            color: 'rgb(15, 118, 110)',
+        },
+        {
+            title: '通讯',
+            contents: ['适用于O2O、B2B、B2C、C2C,分销和B2B2C电子商务模式', '五端合一，微信小程序、APP、公众号、抖音头条小程序'],
+            tags: ['会员管理', '商品展示', '订单管理', '计费'],
+            color: 'rgb(15, 118, 110)',
+        },
+        {
+            title: '教育',
+            contents: ['适用于O2O、B2B、B2C、C2C,分销和B2B2C电子商务模式', '五端合一，微信小程序、APP、公众号、抖音头条小程序'],
+            tags: ['会员管理', '商品展示', '订单管理', '计费'],
+            color: 'rgb(15, 118, 110)',
+        },
+        {
+            title: '服务',
+            contents: ['适用于O2O、B2B、B2C、C2C,分销和B2B2C电子商务模式', '五端合一，微信小程序、APP、公众号、抖音头条小程序'],
+            tags: ['会员管理', '商品展示', '订单管理', '计费'],
+            color: 'rgb(15, 118, 110)',
+        },
+        {
+            title: '金融',
+            contents: [
+                '适金融新起点，安全大平台',
+                '定制App开发、支持IOS / 安卓双系统',
+                '支持商家端 / 客户端 双端开发',
+                '支持App+PC+web+微信四合一全网开发',
+            ],
+            tags: ['第三方支付', '财务管理', '众筹', '借贷'],
+            color: 'rgb(15, 118, 110)',
+        },
+        {
+            title: '医疗',
+            contents: [
+                '适提高工作效率，降低差错风险，软化医疗关系',
+                '定制App开发、支持IOS / 安卓双系统',
+                '支持商家端 / 客户端 双端开发',
+                '支持App+PC+web+微信四合一全网开发',
+            ],
+            tags: ['缴费记录', '健康展示', '健康测试', '病历存储'],
+            color: 'rgb(15, 118, 110)',
+        },
+        {
+            title: '政府',
+            contents: [
+                '覆盖额行业：教育，招聘，订车，新媒体，会展，广告',
+                '定制App开发、支持IOS / 安卓双系统',
+                '支持管理端 / 客户端 双端开发',
+                '支持App+PC+web+微信四合一全网开发',
+            ],
+            tags: ['会员管理', '商品展示', '订单管理', '加盟店管理'],
+            color: 'rgb(15, 118, 110)',
+        },
+    ],
+)
 
 const advantages = useDataCollection(
     'advantages',
     '核心优势',
-    '我们的优势十分明显。我们拥有最先进的开发技术和理念，兼具效率与质量，旨在为您提供最优质的服务。',
+    [
+        'iceDeer致力于提供完整的定制软件开发服务。',
+        '我们通过技术创新、最佳实践、以及标准化管理，为客户提供高质量、高效率、高度定制化的软件开发服务。',
+    ],
     [
         {
             title: '深度定制 从零开发',
@@ -476,46 +544,62 @@ const advantages = useDataCollection(
     ],
 )
 
-const steps = useDataCollection('steps', '服务流程', 'iceDeer通过扎实严谨的项目流程，精研细磨，匠心出精品', [
-    {
-        title: '需求分析',
-        content: ['初步沟通', '详细讨论', '确定开发方案'],
-    },
-    {
-        title: '签署合同',
-        content: ['明确双方权益'],
-    },
-    {
-        title: '原型设计',
-        content: ['交付原型设计稿'],
-    },
-    {
-        title: 'UI设计',
-        content: ['交付UI设计稿'],
-    },
-    {
-        title: '程序开发',
-        content: ['客户端开发', '服务端开发', '数据库设计', 'API接口对接'],
-    },
-    {
-        title: '测试',
-        content: ['功能测试', '测试文档'],
-    },
-    {
-        title: '验收',
-        content: ['最终成品确认'],
-    },
-    {
-        title: '交付',
-        content: ['交付软件源代码', '交付开发文档', '协助部署上线'],
-    },
-    {
-        title: '后期维护',
-        content: ['及时跟进', '免费维护180天'],
-    },
-])
+const steps = useDataCollection(
+    'steps',
+    '服务流程',
+    [
+        'iceDeer致力于提供完整的定制软件开发服务。',
+        '我们通过技术创新、最佳实践、以及标准化管理，为客户提供高质量、高效率、高度定制化的软件开发服务。',
+    ],
+    [
+        {
+            title: '需求分析',
+            content: ['初步沟通', '详细讨论', '确定开发方案'],
+        },
+        {
+            title: '签署合同',
+            content: ['明确双方权益'],
+        },
+        {
+            title: '原型设计',
+            content: ['交付原型设计稿'],
+        },
+        {
+            title: 'UI设计',
+            content: ['交付UI设计稿'],
+        },
+        {
+            title: '程序开发',
+            content: ['客户端开发', '服务端开发', '数据库设计', 'API接口对接'],
+        },
+        {
+            title: '测试',
+            content: ['功能测试', '测试文档'],
+        },
+        {
+            title: '验收',
+            content: ['最终成品确认'],
+        },
+        {
+            title: '交付',
+            content: ['交付软件源代码', '交付开发文档', '协助部署上线'],
+        },
+        {
+            title: '后期维护',
+            content: ['及时跟进', '免费维护180天'],
+        },
+    ],
+)
 
-const about = useDataCollection('about', '关于我们', '关于我们介绍', [])
+const about = useDataCollection(
+    'about',
+    '关于我们',
+    [
+        'iceDeer致力于提供完整的定制软件开发服务。',
+        '我们通过技术创新、最佳实践、以及标准化管理，为客户提供高质量、高效率、高度定制化的软件开发服务。',
+    ],
+    [],
+)
 
 const ad = {
     title: '即刻联系，免费咨询获取开发方案',
@@ -608,4 +692,4 @@ function useDataCollection(componentId, title, introduction, content) {
     }
 }
 
-export { routes, contacts, header, service, stacks, applications, advantages, steps, about, follows, ad }
+export { routes, contacts, overviews, service, stacks, applications, advantages, steps, about, follows, ad }
