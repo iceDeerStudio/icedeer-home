@@ -4,7 +4,7 @@ import { Overview, Service, Stacks, Applications, Advantages, Steps, About, Ad }
 
 export default function Home() {
     return (
-        <div className=' min-h-full w-full bg-bg1'>
+        <div className=' relative mt-[-128px] min-h-full w-full bg-bg1'>
             <Overview data={overviews} />
             <Service data={service} />
             <Stacks data={stacks} />

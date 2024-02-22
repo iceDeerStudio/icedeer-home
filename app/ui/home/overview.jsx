@@ -13,13 +13,13 @@ export default function Overview({ data }) {
         setActiveBanner(index)
     }
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setActiveBanner(prev => (prev >= data.length - 1 ? 0 : prev + 1))
-        }, 6000)
+    // useEffect(() => {
+    //     const timer = setInterval(() => {
+    //         setActiveBanner(prev => (prev >= data.length - 1 ? 0 : prev + 1))
+    //     }, 6000)
 
-        return () => clearInterval(timer)
-    }, [switched])
+    //     return () => clearInterval(timer)
+    // }, [switched])
 
     return (
         <div id='header' className='h-screen w-full'>
@@ -51,7 +51,8 @@ export default function Overview({ data }) {
                                 </div>
                             </div>
                         </div>
-                        <Image alt={banner.title} src={banner.image} fill className=' object-cover' />
+                        <div className='h-full w-full bg-minor'></div>
+                        {/* <Image alt={banner.title} src={banner.image} fill className=' object-cover' /> */}
                     </div>
                 ))}
             </div>
