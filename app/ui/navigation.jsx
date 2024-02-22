@@ -32,7 +32,7 @@ export default function Navigation({ pages, contacts }) {
     return (
         <header
             className={cn(
-                ' left-0 z-50 h-20 w-full transition-all duration-500',
+                ' left-0 z-50 h-[4.5rem] w-full transition-all duration-500',
                 fadeState === 0 && 'absolute top-0 h-[168px] bg-transparent py-lg text-bg1',
                 fadeState === 1 && 'use-shadow border-minor/5 fixed top-[-80px] bg-transparent text-font opacity-0',
                 fadeState === 2 && 'use-shadow border-minor/5 fixed top-0 bg-bg1 text-font ',

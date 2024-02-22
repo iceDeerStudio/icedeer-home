@@ -15,39 +15,43 @@ export default function Applications({ data }) {
             {...data.meta}
             white
             style={{ background: data.content[selectedTab].color }}
-            className='relative h-[calc(100vh-4.5rem)] overflow-hidden'
+            className='relative h-[calc(100vh-4.5rem)] overflow-hidden transition-[background]'
         >
-            <div className='flex flex-1'>
-                <div className='flex flex-1 flex-col text-bg1'>
-                    <div className='mb-md flex flex-wrap gap-4'>
-                        {data.content.map((application, index) => (
-                            <span
-                                key={application.title}
-                                onClick={() => selectTab(index)}
-                                className={cn(
-                                    'border-bg-1 h-8 cursor-pointer whitespace-nowrap rounded border border-bg1 bg-transparent px-sm leading-[30px] transition-colors',
-                                    selectedTab === index && 'bg-bg1',
-                                )}
-                                style={{ ...(selectedTab === index && { color: selectedData.color }) }}
-                            >
-                                {application.title}
-                            </span>
-                        ))}
-                    </div>
-                    <h3 className='mb-md block text-4xl font-bold'>{selectedData.title}</h3>
-                    {selectedData.contents.map(content => (
-                        <p key={content} className='leading-8'>
-                            {content}
-                        </p>
+            <div className='flex h-full flex-col'>
+                <div className='mb-md flex w-full gap-4'>
+                    {data.content.map((application, index) => (
+                        <button
+                            key={application.title}
+                            onClick={() => selectTab(index)}
+                            className={cn(
+                                'h-10 rounded border-2 border-bg1 bg-transparent px-4 text-bg1',
+                                selectedTab === index && 'bg-bg1 font-bold',
+                            )}
+                            style={{ ...(selectedTab === index && { color: selectedData.color }) }}
+                        >
+                            {application.title}
+                        </button>
                     ))}
-                    <div className='mt-auto flex flex-wrap gap-4'>
-                        {selectedData.tags.map(tag => (
-                            <p key={tag} className='leading-8'>#{tag}</p>
-                        ))}
-                    </div>
                 </div>
-                <div className='flex flex-1 pl-md'>
-                    {selectedData.image}
+                <div className='flex h-full'>
+                    <div className='flex h-full flex-col text-bg1'>
+                        <h3 className='my-md block text-5xl font-bold'>{selectedData.title}</h3>
+                        <div className='ml-8 flex flex-col gap-6'>
+                            {selectedData.contents.map(content => (
+                                <div key={content} className='flex h-4'>
+                                    <div className='my-auto mr-2 h-2 w-2 rounded-sm bg-bg1'></div>
+                                    <p className='text-lg leading-4'>{content}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className='mt-auto flex flex-wrap gap-8 text-sm opacity-50'>
+                            {selectedData.tags.map(tag => (
+                                <p key={tag}># {tag}</p>
+                            ))}
+                        </div>
+                    </div>
+                    <div className='ml-auto aspect-[1/1] h-full'>{selectedData.image}</div>
                 </div>
             </div>
         </Container>
