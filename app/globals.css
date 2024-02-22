@@ -12,6 +12,9 @@
         --bg-1: rgb(255, 255, 255);
         --bg-2: rgb(243, 244, 246);
       }
+      * {
+        font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
 }
 
 @layer components {
