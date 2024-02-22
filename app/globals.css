@@ -21,24 +21,18 @@
     .use-shadow {
         @apply shadow-[2px_4px_12px_rgba(34,68,204,.08)];
     }
-    .use-shadow-lg {
-        @apply shadow-[2px_3px_24px_rgba(23,37,84,.09)];
-    }
     .use-blur {
         @apply  bg-white/80 backdrop-blur-lg;
     }
     .use-max {
-        @apply max-w-[1440px] mx-auto;
+        @apply max-w-[2160px] mx-auto;
     }
     .use-hover {
         @apply hover:[transform:scale3d(1.04,1.04,1.04)];
     }
-    .use-underlineAnim{
-      background: linear-gradient(to right, var(--main), var(--main))no-repeat left bottom;
-    }
 }
 
-
+/**
 @font-face {
   font-family: 'HarmonyOSHans-Regular';
   src: url('/fonts/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
@@ -52,6 +46,7 @@
   font-weight: bolder;
   font-style: normal;
 }
+*/
 
 body {
   color: rgb(var(--primary));

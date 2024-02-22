@@ -24,15 +24,6 @@ export default function Overview({ data }) {
     return (
         <div id='header' className='h-screen w-full'>
             <div className='relative h-full w-full overflow-hidden'>
-                <div className='absolute right-0 top-1/2 z-20 flex w-1 translate-y-[-50%] flex-col gap-2'>
-                    {data.map((_, index) => (
-                        <span
-                            key={index}
-                            onClick={() => handleSwitchBanner(index)}
-                            className={cn('h-12 w-1 cursor-pointer bg-bg1', activeBanner === index && 'bg-main')}
-                        ></span>
-                    ))}
-                </div>
                 {data.map((banner, index) => (
                     <div
                         key={banner.title}

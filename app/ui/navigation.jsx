@@ -8,26 +8,34 @@ import Navigator from '@/components/navigator'
 import { useEffect, useState } from 'react'
 
 export default function Navigation({ pages, contacts }) {
-    const [fade, setFade] = useState(true)
+    const [fadeState, setFadeState] = useState(0)
 
     useEffect(() => {
         const handleScroll = () => {
-            if (!fade && window.scrollY <= 32) {
-                setFade(true)
-            } else if (fade && window.scrollY > 32) {
-                setFade(false)
+            if (fadeState !== 0 && window.scrollY < 90) {
+                setFadeState(0)
+                return
+            } else if (fadeState !== 1 && window.scrollY < window.innerHeight / 2 && window.scrollY > 90) {
+                setFadeState(1)
+                return
+            } else if (fadeState !== 2 && window.scrollY > window.innerHeight / 2) {
+                setFadeState(2)
+                return
             }
         }
         document.addEventListener('scroll', handleScroll)
+        handleScroll()
 
         return () => removeEventListener('scroll', handleScroll)
-    }, [fade])
+    }, [fadeState])
 
     return (
         <header
             className={cn(
-                'use-shadow fixed left-0 top-0 z-50 h-[4.5rem] w-full transition-all duration-[200ms]',
-                fade ? 'h-[168px] bg-transparent py-lg text-bg1' : 'use-shadow border-minor/5 bg-bg1 text-font',
+                ' left-0 z-50 h-20 w-full transition-all duration-500',
+                fadeState === 0 && 'absolute top-0 h-[168px] bg-transparent py-lg text-bg1',
+                fadeState === 1 && 'use-shadow border-minor/5 fixed top-[-80px] bg-transparent text-font opacity-0',
+                fadeState === 2 && 'use-shadow border-minor/5 fixed top-0 bg-bg1 text-font ',
             )}
         >
             <div className='use-max flex h-full items-center px-lg'>

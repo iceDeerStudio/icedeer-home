@@ -4,7 +4,7 @@ export default function Stacks({ data }) {
     return (
         <Container {...data.meta} className='relative h-[calc(100vh-4.5rem)] overflow-hidden bg-bg2'>
             <div className='relative z-[2] grid flex-1 grid-cols-4'>
-                <div className='absolute top-0 h-full w-full'>
+                <div className='absolute inset-0'>
                     <span className='absolute left-1/2 top-0 block h-px w-screen translate-x-[-50%] bg-divider'></span>
                     <span className='absolute left-1/2 top-1/4 block h-px w-screen translate-x-[-50%] bg-divider'></span>
                     <span className='absolute left-1/2 top-2/4 block h-px w-screen translate-x-[-50%] bg-divider'></span>
@@ -23,12 +23,15 @@ export default function Stacks({ data }) {
                     </div>
                 ))}
             </div>
-            <div className='absolute left-0 top-0 h-full w-full'>
-                <div className='use-max z-0 flex h-full px-lg'>
-                    <span className='block h-full w-1/4 border-l border-divider'></span>
-                    <span className='block h-full w-1/4 border-l border-divider'></span>
-                    <span className='block h-full w-1/4 border-l border-divider'></span>
-                    <span className='block h-full w-1/4 border-l border-r border-divider'></span>
+            <div className='absolute inset-0'>
+                <div className='use-max h-full px-lg'>
+                    <div className='relative h-full w-full'>
+                        <span className='absolute left-0 top-0 block h-full w-px bg-divider'></span>
+                        <span className='absolute left-1/4 top-0 block h-full w-px bg-divider'></span>
+                        <span className='absolute left-2/4 top-0 block h-full w-px bg-divider'></span>
+                        <span className='absolute left-3/4 top-0 block h-full w-px bg-divider'></span>
+                        <span className='absolute left-full top-0 block h-full w-px bg-divider'></span>
+                    </div>
                 </div>
             </div>
         </Container>

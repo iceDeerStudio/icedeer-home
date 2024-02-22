@@ -49,6 +49,7 @@ export default function Navigator({ pages, match, className }) {
         }
         if (match) {
             document.addEventListener('scroll', handleScroll)
+            handleScroll()
         }
 
         return () => match && removeEventListener('scroll', handleScroll)
