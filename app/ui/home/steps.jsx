@@ -25,7 +25,7 @@ export default function Steps({ data }) {
                                     {index !== 0 && (
                                         <span className='h-2 w-2 rotate-45 border-b-2 border-r-2 border-shadow'></span>
                                     )}
-                                    <p className='text-sm text-shadow'>{v}</p>
+                                    <p className='text-sm text-font'>{v}</p>
                                 </Fragment>
                             ))}
                         </div>

@@ -14,8 +14,8 @@ export default function Applications({ data }) {
         <Container
             {...data.meta}
             white
-            style={{ background: selectedData.color }}
-            className='relative h-[calc(100vh-5rem)] overflow-hidden'
+            style={{ background: data.content[selectedTab].color }}
+            className='relative h-[calc(100vh-4.5rem)] overflow-hidden'
         >
             <div className='flex flex-1'>
                 <div className='flex flex-1 flex-col text-bg1'>

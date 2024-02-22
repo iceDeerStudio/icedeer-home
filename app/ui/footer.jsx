@@ -4,7 +4,7 @@ import Navigator from '@/components/navigator'
 export default function Footer({ pages, follows }) {
     return (
         <footer className='select-none bg-minor py-16'>
-            <div className='use-max px-lg flex flex-col text-white'>
+            <div className='use-max flex flex-col px-lg text-white'>
                 <div className='mb-16 flex leading-8'>
                     <IcedeerFontSvg className='my-auto h-6' />
                     {follows.map(follow => (
@@ -15,7 +15,7 @@ export default function Footer({ pages, follows }) {
                     <p className='ml-auto'>© 2024 iceDeer</p>
                 </div>
                 <div className='flex'>
-                    <Navigator pages={pages} className='mr-12 cursor-pointer text-shadow transition-[color] hover:text-white' />
+                    <Navigator pages={pages} className='mr-12 cursor-pointer text-font transition-[color] hover:text-white' />
                 </div>
             </div>
         </footer>

@@ -87,13 +87,13 @@ const contacts = [
 const overviews = [
     {
         title: 'iceDeer软件开发工作室',
-        contents: ['注重设计、质量与效率', '为您提供极致的软件定制服务'],
+        contents: ['注重设计、质量与效率，', '为您提供极致的软件定制服务。'],
         tags: ['深度定制', '延期赔付', '开发进度周报', '180天免费维护'],
         image: banner,
     },
     {
-        title: 'iceDeer软件开发工作室',
-        contents: ['注重设计、质量与效率', '为您提供极致的软件定制服务'],
+        title: 'iceDeer软件开发工作室。',
+        contents: ['注重设计、质量与效率，', '为您提供极致的软件定制服务。'],
         tags: ['深度定制', '延期赔付', '开发进度周报', '180天免费维护'],
         image: banner1,
     },

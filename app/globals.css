@@ -16,7 +16,7 @@
 
 @layer components {
     .use-shadow {
-        @apply shadow-[2px_4px_12px_rgba(23,37,84,.04)];
+        @apply shadow-[2px_4px_12px_rgba(34,68,204,.08)];
     }
     .use-blur {
         @apply  bg-white/80 backdrop-blur-lg;
@@ -25,7 +25,7 @@
         @apply max-w-[2160px] mx-auto;
     }
     .use-hover {
-        @apply hover:[transform:scale3d(1.05,1.05,1.05)];
+        @apply hover:[transform:scale3d(1.04,1.04,1.04)];
     }
 }
 
