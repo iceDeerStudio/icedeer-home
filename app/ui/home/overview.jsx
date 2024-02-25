@@ -34,24 +34,26 @@ export default function Overview({ data }) {
                     >
                         <div className='absolute inset-0 z-20 py-lg'>
                             <div className='use-max relative h-full w-full px-lg'>
-                                <h1 className='absolute bottom-1/2 pb-md text-6xl font-bold text-bg1'>{banner.title}</h1>
-                                <main className='absolute top-1/2'>
+                                <h1 className='absolute top-1/2 w-96 leading-8 tracking-widest text-font drop-shadow-2xl'>
+                                    {banner.title}
+                                </h1>
+                                <main className='absolute bottom-1/2'>
                                     {banner.contents.map(content => (
-                                        <p key={content} className='mb-sm text-4xl font-semibold leading-8 text-main'>
+                                        <p key={content} className='mb-8 text-5xl font-bold tracking-wider text-main'>
                                             {content}
                                         </p>
                                     ))}
                                 </main>
                                 <div className='absolute bottom-0 flex flex-wrap gap-8'>
                                     {banner.tags.map(tag => (
-                                        <p key={tag} className='text-xl leading-8 text-bg1'>
+                                        <p key={tag} className='text-sm tracking-wider text-font'>
                                             # {tag}
                                         </p>
                                     ))}
                                 </div>
                             </div>
                         </div>
-                        <div className='h-full w-full bg-minor'></div>
+                        <div className='h-full w-full bg-bg1'></div>
                         {/* <Image alt={banner.title} src={banner.image} fill className=' object-cover' /> */}
                     </div>
                 ))}

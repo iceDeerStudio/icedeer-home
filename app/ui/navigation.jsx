@@ -26,13 +26,17 @@ export default function Navigation({ pages, contacts }) {
         <header
             ref={navRef}
             className={cn(
-                'sticky left-0 top-[-56px] z-50 h-[128px] w-full pt-[56px] text-white transition-colors duration-[400ms]',
-                fadeState && 'use-shadow bg-bg1 text-font',
+                'sticky left-0 top-[-56px] z-50 h-[128px] w-full pt-[56px] text-font transition-colors duration-[400ms]',
+                fadeState && 'use-shadow bg-bg1',
             )}
         >
             <div className='use-max flex h-full items-center px-lg'>
                 <IcedeerFontSvg className=' mr-sm h-6 text-main' />
-                <Navigator pages={pages} match className='m-4 cursor-pointer text-sm hover:font-bold hover:text-main' />
+                <Navigator
+                    pages={pages}
+                    match
+                    className='m-4 cursor-pointer text-sm tracking-wider hover:font-bold hover:text-main'
+                />
                 <button className='group relative ml-auto h-10 rounded bg-main px-6 text-sm text-bg1'>
                     联系我们
                     <div className='use-shadow absolute right-0 top-0 grid w-0 grid-rows-[0fr] overflow-hidden rounded bg-bg1 text-minor opacity-0 transition-all duration-300 group-focus-within:w-48 group-focus-within:grid-rows-[1fr] group-focus-within:opacity-100'>

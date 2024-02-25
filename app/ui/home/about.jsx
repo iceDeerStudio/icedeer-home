@@ -5,18 +5,18 @@ export default function About({ data }) {
         <>
             <div className='h-px w-full bg-divider'></div>
             <Container {...data.meta} className='bg-white'>
-                <p className=' text-xl text-font'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellat voluptatibus veniam minima nulla qui
-                    ad commodi error facere nihil voluptate ex illum dicta, libero vero consequatur perferendis mollitia
-                    similique! Veniam cumque amet voluptate rerum dolorum optio laboriosam repellendus quos iusto excepturi, eum
-                    dicta obcaecati incidunt consectetur nihil beatae sunt saepe unde error non et quisquam sint. Error,
-                    aspernatur similique? Neque dignissimos libero dolorem asperiores, veritatis veniam aspernatur commodi
-                    doloribus sunt cupiditate quasi praesentium ullam a dolor provident reiciendis magnam mollitia cum sapiente
-                    iste similique est accusamus nulla. Dolorem, architecto! Est libero eum necessitatibus itaque, delectus iste
-                    officia voluptatibus veritatis ducimus temporibus laboriosam, vel iusto sed quae qui? Iusto iste est dolore
-                    asperiores, nihil ullam maxime necessitatibus a enim? Soluta? Rerum excepturi deleniti cum, eius pariatur
-                    laborum sed dolor neque vitae magni minus aut maiores numquam nostrum dignissimos optio id ea inventore
-                    blanditiis! Laudantium fuga necessitatibus praesentium facere iure dignissimos.
+                <p className='text-font'>
+                    iceDeer
+                    软件工作室成立于2018年，是一个专注于技术创新与卓越品质的精锐开发团队，矢志为全球范围内的个人用户和企业客户提供量身定制的高端软件解决方案。历经数载积累与沉淀，在2024年，iceDeer
+                    正式步入全面商业化运营阶段，以更加稳健的步伐服务于更广泛的市场。
+                    我们深信技术是推动变革的核心动力，因此始终坚持站在技术前沿，采用业界最先进的开发工具和技术框架，确保每一个项目都能达到卓越的技术标准和无可挑剔的稳定性。在
+                    iceDeer，我们视产品质量为生命线，倾力投入从概念构思至交付使用的全生命周期管理，严格遵循国际认可的开发与管理最佳实践，以确保每一件产品都能够满足乃至超越客户的期待。
+                    细致入微的用户体验是我们设计与开发过程中的灵魂所在。我们精心雕琢产品的每一寸界面与交互逻辑，致力于营造出兼具商业美学与功能实用性的高品质视觉与操作体验，让用户在每一次接触中都能感受到专业与匠心。
+                    iceDeer
+                    引以为傲的是其严谨高效的标准化开发流程管理体系。从需求捕获与分析阶段开始，通过精心的产品架构设计，到严格的开发与质量保证测试，直至最终部署上线，我们拥有一整套完备且高效的项目管控机制，旨在最大程度地降低成本，提升工作效率，确保项目按时按质完成。
+                    作为值得信赖的合作伙伴，iceDeer
+                    倡导公开透明的合作模式，我们的定价策略基于实际项目的工作量评估，包括所需的时间投入与人力资源成本，坚决杜绝隐性费用及层层转包现象，保障每一位客户的权益，共同构建长期互信的合作关系。选择
+                    iceDeer，就是选择了专业、可靠、高性价比的软件开发服务体验。
                 </p>
             </Container>
         </>
