@@ -19,7 +19,7 @@ export default function Stacks({ data }) {
                         <div className=' flex aspect-[1] h-full items-center'>
                             <div className='mr-md aspect-[1] h-full max-h-16 '>{tech.icon}</div>
                         </div>
-                        <p className='ml-8 leading-8'>{tech.title}</p>
+                        <p className='ml-8 font-bold leading-8'>{tech.title}</p>
                     </div>
                 ))}
             </div>

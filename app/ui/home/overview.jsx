@@ -35,7 +35,7 @@ export default function Overview({ data }) {
                         <div className='absolute inset-0 z-20 py-lg'>
                             <div className='use-max relative h-full w-full px-lg'>
                                 {/* <h1 className='absolute top-1/2 w-96 leading-8 tracking-widest text-bg1'>{banner.title}</h1> */}
-                                <main className='absolute bottom-0'>
+                                <main className='absolute bottom-0 mb-2'>
                                     {banner.contents.map(content => (
                                         <p
                                             key={content}

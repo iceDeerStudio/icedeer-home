@@ -11,7 +11,7 @@ export default function Home() {
             <Applications data={applications} />
             <Advantages data={advantages} />
             <Steps data={steps} />
-            <About data={about} />
+            {/* <About data={about} /> */}
             <Ad data={ad} />
         </div>
     )
