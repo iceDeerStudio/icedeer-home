@@ -4,15 +4,15 @@ import Container from './container'
 
 export default function Steps({ data }) {
     return (
-        <Container {...data.meta}>
-            <div className='flex py-md'>
+        <Container paddingless {...data.meta}>
+            <div className='flex overflow-x-auto py-md lg:px-lg'>
                 {data.content.map((step, index) => (
-                    <div key={step.title} className='flex flex-1 flex-col'>
+                    <div key={step.title} className='flex min-w-28 flex-1 flex-col padOnly:first:ml-lg padOnly:last:mr-lg mobile:first:ml-md mobile:last:mr-md'>
                         <div className='relative mb-6 flex h-10 flex-row items-center rounded-[0.25rem_1.25rem_1.25rem_0.25rem] bg-minor'>
                             {index !== 0 && (
                                 <div className='absolute left-[-24px] h-12 w-12 rounded-r-full border-4 border-l-0 border-bg1 bg-minor'></div>
                             )}
-                            <div className='flex h-full w-full flex-row items-center justify-center px-sm text-sm text-bg1'>
+                            <div className='flex h-full w-full flex-row items-center justify-center whitespace-nowrap px-sm text-sm text-bg1'>
                                 {step.title}
                             </div>
                         </div>

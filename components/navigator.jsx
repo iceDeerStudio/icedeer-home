@@ -55,8 +55,9 @@ export default function Navigator({ pages, match, className }) {
         return () => match && removeEventListener('scroll', handleScroll)
     }, [])
 
-    return pages.map(page => (
+    return pages.map((page, index) => (
         <a
+            tabIndex={index}
             key={page.route}
             onClick={() => handleNavigate(page.route)}
             className={cn(className, match && matchPath(page.route) && 'font-bold text-main')}

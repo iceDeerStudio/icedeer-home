@@ -5,7 +5,7 @@ import Container from './container'
 export default function Service({ data }) {
     return (
         <Container {...data.meta}>
-            <div className='flex gap-8'>
+            <div className='mobile:grid-cols-1 padOnly:grid-cols-2 grid grid-cols-4 gap-8'>
                 {data.content.map(element => (
                     <div
                         key={element.title}
@@ -13,15 +13,15 @@ export default function Service({ data }) {
                     >
                         <div className='relative h-full w-full'>
                             <Image
-                                alt={'我们的服务' + element.title}
+                                alt={'我们的服务:' + element.title}
                                 className='absolute left-0 top-0 h-full w-full transition-[transform] duration-[400ms] group-hover:[transform:scale3d(1.2,1.2,1.2)]'
                                 src={element.image}
                             />
-                            <div className='use-blur absolute left-0 top-0 mt-[100%] h-full w-full transition-[margin-top] duration-[400ms] group-hover:mt-0'>
+                            <div className='use-blur absolute left-0 top-0 mt-[100%] h-full w-full transition-[margin-top] duration-[400ms] hover:overflow-y-auto group-hover:mt-0'>
                                 <div className='flex aspect-[3/1] w-full'>
                                     <div className='m-auto flex items-center'>
                                         <div className='mr-1 h-6 w-6 text-black'>{element.icon}</div>
-                                        <h3 className='my-auto font-bold text-minor'>{element.title}</h3>
+                                        <h3 className='my-auto mobile:text-xl font-bold text-minor'>{element.title}</h3>
                                     </div>
                                 </div>
                                 <div className='flex flex-col gap-4 px-8 opacity-0 transition-[opacity] duration-[400ms] group-hover:opacity-100'>

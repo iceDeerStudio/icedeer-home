@@ -26,6 +26,11 @@ module.exports = {
                 sm: '1rem',
                 xs: '0.5rem',
             },
+            screens: {
+                mobile: { max: '640px' },
+                pad: { max: '1024px' },
+                padOnly: { min: '640px', max: '1024px' },
+            },
         },
     },
     plugins: [],
