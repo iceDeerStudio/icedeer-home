@@ -15,7 +15,7 @@ export default function Applications({ data }) {
             {...data.meta}
             white
             style={{ background: data.content[selectedTab].color }}
-            className='relative overflow-hidden lg:h-[calc(100vh-4.5rem)] min-h-[780px]'
+            className='relative min-h-[780px] overflow-hidden lg:h-[calc(100vh-4.5rem)]'
         >
             <div className='flex h-full flex-col'>
                 <div className='mb-md flex w-full flex-wrap gap-4'>
@@ -24,7 +24,7 @@ export default function Applications({ data }) {
                             key={application.title}
                             onClick={() => selectTab(index)}
                             className={cn(
-                                'h-10 rounded border-2 border-bg1 bg-transparent mobile:px-3 mobile:h-9 px-4 text-bg1',
+                                'h-10 rounded border-2 border-bg1 bg-transparent px-4 text-bg1 mobile:h-9 mobile:px-3',
                                 selectedTab === index && 'bg-bg1 font-bold',
                             )}
                             style={{ ...(selectedTab === index && { color: selectedData.color }) }}
@@ -35,7 +35,7 @@ export default function Applications({ data }) {
                 </div>
                 <div className='flex h-full mobile:flex-col'>
                     <div className='flex h-full flex-col text-bg1'>
-                        <h3 className='my-md mobile:hidden text-5xl font-bold block'>{selectedData.title}</h3>
+                        <h3 className='my-md block text-5xl font-bold mobile:hidden'>{selectedData.title}</h3>
                         <div className='flex flex-col gap-6 sm:ml-8'>
                             {selectedData.contents.map(content => (
                                 <div key={content} className='flex'>
@@ -50,7 +50,7 @@ export default function Applications({ data }) {
                             ))}
                         </div>
                     </div>
-                    <div className='ml-auto mobile:hidden aspect-[1/1] h-full block'>{selectedData.image}</div>
+                    <div className='ml-auto block aspect-[1/1] h-full mobile:hidden'>{selectedData.image}</div>
                 </div>
             </div>
         </Container>
