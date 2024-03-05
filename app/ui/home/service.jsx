@@ -1,11 +1,12 @@
 import Image from 'next/image'
 
 import Container from './container'
+import FadeInAnimation from '@/components/annimate-fade-in'
 
 export default function Service({ data }) {
     return (
         <Container {...data.meta}>
-            <div className='grid grid-cols-4 gap-8 mobile:grid-cols-1 padOnly:grid-cols-2'>
+            <FadeInAnimation className='grid grid-cols-4 gap-8 mobile:grid-cols-1 padOnly:grid-cols-2'>
                 {data.content.map(element => (
                     <div
                         key={element.title}
@@ -36,7 +37,7 @@ export default function Service({ data }) {
                         </div>
                     </div>
                 ))}
-            </div>
+            </FadeInAnimation>
         </Container>
     )
 }

@@ -1,11 +1,12 @@
 import { Fragment } from 'react'
 
 import Container from './container'
+import FadeInAnimation from '@/components/annimate-fade-in'
 
 export default function Steps({ data }) {
     return (
         <Container paddingless {...data.meta}>
-            <div className='flex overflow-x-auto py-md lg:px-lg'>
+            <FadeInAnimation className='flex overflow-x-auto py-md lg:px-lg'>
                 {data.content.map((step, index) => (
                     <div key={step.title} className='flex min-w-28 flex-1 flex-col padOnly:first:ml-lg padOnly:last:mr-lg mobile:first:ml-md mobile:last:mr-md'>
                         <div className='relative mb-6 flex h-10 flex-row items-center rounded-[0.25rem_1.25rem_1.25rem_0.25rem] bg-minor'>
@@ -31,7 +32,7 @@ export default function Steps({ data }) {
                         </div>
                     </div>
                 ))}
-            </div>
+            </FadeInAnimation>
         </Container>
     )
 }

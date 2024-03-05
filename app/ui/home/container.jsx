@@ -1,11 +1,12 @@
 import Title from '@/components/column-title'
 import { cn } from '@/app/lib/cn'
+import FadeInAnimation from '@/components/annimate-fade-in'
 
 export default function Container({ componentId, title, introduction, style, className, white, paddingless, children }) {
     return (
         <section style={style} id={componentId} className={className}>
             <div className={cn('use-max flex h-full flex-col py-lg', !paddingless && 'mobile:px-md px-lg')}>
-                <div
+                <FadeInAnimation
                     className={cn(
                         'pad:flex-col z-[2] flex cursor-default pb-md text-white',
                         paddingless && 'mobile:px-md px-lg',
@@ -19,7 +20,7 @@ export default function Container({ componentId, title, introduction, style, cla
                             </p>
                         ))}
                     </div>
-                </div>
+                </FadeInAnimation>
                 {children}
             </div>
         </section>

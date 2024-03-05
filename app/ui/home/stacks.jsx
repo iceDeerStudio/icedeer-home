@@ -1,3 +1,4 @@
+import FadeInAnimation from '@/components/annimate-fade-in'
 import Container from './container'
 
 export default function Stacks({ data }) {
@@ -16,7 +17,7 @@ export default function Stacks({ data }) {
                     <span className='absolute left-1/2 top-full block h-px w-screen translate-x-[-50%] bg-divider'></span>
                 </div>
                 {data.content.map(tech => (
-                    <div
+                    <FadeInAnimation
                         key={tech.title}
                         className='hover:use-shadow use-hover mobile:px-sm relative flex select-none items-center overflow-hidden rounded px-md py-md transition-all duration-[400ms] hover:bg-bg1 hover:text-main'
                     >
@@ -25,7 +26,7 @@ export default function Stacks({ data }) {
                         </div>
                         <p className='pad:ml-sm ml-md whitespace-nowrap font-bold leading-8'>{tech.title}</p>
                         <span className=''></span>
-                    </div>
+                    </FadeInAnimation>
                 ))}
             </div>
             <div className='absolute inset-0'>

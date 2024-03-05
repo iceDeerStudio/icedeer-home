@@ -1,3 +1,4 @@
+import FadeInAnimation from '@/components/annimate-fade-in'
 import Container from './container'
 
 export default function Advantages({ data }) {
@@ -5,7 +6,7 @@ export default function Advantages({ data }) {
         <Container {...data.meta} className='bg-bg2'>
             <div className='grid w-full grid-cols-2 mobile:grid-cols-1 mobile:gap-4 gap-8 '>
                 {data.content.map(advantage => (
-                    <div
+                    <FadeInAnimation
                         key={advantage.title}
                         className='hover:use-shadow use-hover group flex min-h-36 cursor-default flex-col rounded  border-divider bg-bg1 p-7 transition-all duration-[400ms]'
                     >
@@ -13,7 +14,7 @@ export default function Advantages({ data }) {
                             {advantage.title}
                         </h3>
                         <p className='text-font'>{advantage.description}</p>
-                    </div>
+                    </FadeInAnimation>
                 ))}
             </div>
         </Container>

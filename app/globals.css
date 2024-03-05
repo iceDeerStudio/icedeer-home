@@ -31,6 +31,9 @@
     .use-hover {
         @apply hover:[transform:scale3d(1.04,1.04,1.04)];
     }
+    .use-scroll-fade-animation{
+      transition: transform 1s ease-in-out, opacity .8s ease-in-out;
+    }
 }
 
 /**

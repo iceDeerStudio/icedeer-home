@@ -4,6 +4,7 @@ import { cn } from '@/app/lib/cn'
 import { useState } from 'react'
 
 import Container from './container'
+import FadeInAnimation from '@/components/annimate-fade-in'
 
 export default function Applications({ data }) {
     const [selectedTab, selectTab] = useState(0)
@@ -17,7 +18,7 @@ export default function Applications({ data }) {
             style={{ background: data.content[selectedTab].color }}
             className='relative min-h-[780px] overflow-hidden lg:h-[calc(100vh-4.5rem)]'
         >
-            <div className='flex h-full flex-col'>
+            <FadeInAnimation className='flex h-full flex-col'>
                 <div className='mb-md flex w-full flex-wrap gap-4'>
                     {data.content.map((application, index) => (
                         <button
@@ -52,7 +53,7 @@ export default function Applications({ data }) {
                     </div>
                     <div className='ml-auto block aspect-[1/1] h-full mobile:hidden'>{selectedData.image}</div>
                 </div>
-            </div>
+            </FadeInAnimation>
         </Container>
     )
 }

@@ -1759,7 +1759,7 @@ const ad = {
 const follows = [
     {
         platform: 'facebook',
-        link: '',
+        link: 'https://facebook.com/icedeerstudio',
         icon: (
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
                 <path
@@ -1807,7 +1807,7 @@ const follows = [
     },
     {
         platform: 'weibo',
-        link: '',
+        link: 'https://weibo.com/icedeerstudio',
         icon: (
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
                 <path
@@ -1819,7 +1819,7 @@ const follows = [
     },
     {
         platform: 'tiktok',
-        link: '',
+        link: 'https://www.douyin.com/user/MS4wLjABAAAAM48h3P7BAezZ2b7mBBmoTVQ1XYtnS2oR3_SA5yuHKeWSwNiVBXkmSpIwhiftas8Q',
         icon: (
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
                 <path
