@@ -24,7 +24,7 @@ export default function Applications({ data }) {
                             key={application.title}
                             onClick={() => selectTab(index)}
                             className={cn(
-                                'h-10 rounded border-2 border-bg1 bg-transparent px-4 text-bg1',
+                                'h-10 rounded border-2 border-bg1 bg-transparent mobile:px-3 mobile:h-9 px-4 text-bg1',
                                 selectedTab === index && 'bg-bg1 font-bold',
                             )}
                             style={{ ...(selectedTab === index && { color: selectedData.color }) }}
@@ -40,7 +40,7 @@ export default function Applications({ data }) {
                             {selectedData.contents.map(content => (
                                 <div key={content} className='flex'>
                                     <div className='mb-auto mt-2 h-2 min-w-2 rounded-sm bg-bg1'></div>
-                                    <p className='pl-2 text-lg'>{content}</p>
+                                    <p className='pl-2 text-lg mobile:text-base'>{content}</p>
                                 </div>
                             ))}
                         </div>

@@ -14,7 +14,7 @@ export default function Title({ route, title, white }) {
         <h2
             onClick={handleNavigate}
             className={cn(
-                'group mr-sm h-16 cursor-pointer whitespace-nowrap text-5xl font-bold leading-[64px]',
+                'group mr-sm h-16 cursor-pointer whitespace-nowrap text-5xl font-bold leading-[64px] mobile:text-4xl',
                 !white && 'text-main',
             )}
         >

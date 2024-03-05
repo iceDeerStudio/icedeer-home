@@ -30,6 +30,7 @@ module.exports = {
                 mobile: { max: '640px' },
                 pad: { max: '1024px' },
                 padOnly: { min: '640px', max: '1024px' },
+                lg: { min: '1025px' },
             },
         },
     },
