@@ -32,8 +32,21 @@ export default function Navigation({ pages, contacts }) {
         >
             <div className='use-max flex h-full items-center px-lg mobile:px-md'>
                 <button className='group relative cursor-pointer pr-sm lg:hidden'>
-                    <svg xmlns='http://www.w3.org/2000/svg' className='h-8 w-8' viewBox='0 0 24 24'>
-                        <path fill='currentColor' d='M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z'></path>
+                    <svg
+                        className='h-8 w-8'
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='24'
+                        height='24'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                        stroke='currentColor'
+                        stroke-width='2'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                    >
+                        <line x1='4' x2='20' y1='12' y2='12' />
+                        <line x1='4' x2='20' y1='6' y2='6' />
+                        <line x1='4' x2='20' y1='18' y2='18' />
                     </svg>
                     <div className='use-shadow absolute left-0 top-0 grid w-0 grid-rows-[0fr] overflow-hidden rounded bg-bg1 text-minor opacity-0 transition-all duration-300 group-focus:w-44 group-focus:grid-rows-[1fr] group-focus:opacity-100'>
                         <div className='flex min-h-0 flex-col'>

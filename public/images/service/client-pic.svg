@@ -11,25 +11,31 @@
       }
 
       .e {
-        fill: #c7cddd;
+        fill: #24c;
       }
 
       .f {
-        fill: #1d4ed8;
+        fill: #c7cddd;
       }
 
       .g {
+        fill: #60a5fa;
+      }
+
+      .h {
         fill: #f9fafb;
       }
     </style>
   </defs>
   <g id="a" data-name="bg">
-    <rect class="g" width="300" height="400"/>
+    <rect class="h" width="300" height="400"/>
   </g>
   <g id="b" data-name="windows">
-    <rect class="e" x="100" y="107.01" width="175" height="131.25" rx="4" ry="4"/>
+    <rect class="f" x="100" y="107.01" width="175" height="131.25" rx="4" ry="4"/>
     <rect class="c" x="25" y="139.69" width="175" height="131.25" rx="4" ry="4"/>
-    <rect class="f" x="62.5" y="79.06" width="175" height="131.25" rx="4" ry="4"/>
-    <rect class="d" x="67.5" y="89.06" width="165" height="116.25" rx="2" ry="2"/>
+    <rect class="d" x="62.5" y="79.06" width="175" height="131.25" rx="4" ry="4"/>
+    <rect class="g" x="67.5" y="112.32" width="25" height="92.99" rx="2" ry="2"/>
+    <rect class="c" x="97.48" y="112.32" width="135.02" height="92.99" rx="2" ry="2"/>
+    <rect class="e" x="67.5" y="82.93" width="165" height="25" rx="2" ry="2"/>
   </g>
 </svg>

@@ -2,8 +2,9 @@
 
 import { cn } from '@/app/lib/cn'
 import { useState, useEffect, useRef } from 'react'
+import { Fragment } from 'react'
 
-export default function FadeInAnimation({ className, children, ...props }) {
+export default function FadeInAnimation({ children }) {
     const domRef = useRef(null)
     const [visible, setVisible] = useState(false)
 
@@ -24,11 +25,9 @@ export default function FadeInAnimation({ className, children, ...props }) {
         <div
             ref={domRef}
             className={cn(
-                className,
-                'use-scroll-fade-animation',
-                visible ? 'opacity-1 translate-y-0' : ' translate-y-10 opacity-0',
+                'transition-[transform_opacity] duration-700',
+                visible ? 'opacity-1 translate-y-0' : ' translate-y-8 opacity-0',
             )}
-            {...props}
         >
             {children}
         </div>

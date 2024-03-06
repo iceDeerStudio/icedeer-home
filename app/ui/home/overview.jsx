@@ -3,10 +3,10 @@
 import { cn } from '@/app/lib/cn'
 import Image from 'next/image'
 import { useState } from 'react'
+import FadeInAnimation from '@/components/annimate-fade-in'
 
 export default function Overview({ data }) {
     const [activeBanner, setActiveBanner] = useState(0)
-
 
     return (
         <div id='header' className='h-screen w-full'>
@@ -20,16 +20,18 @@ export default function Overview({ data }) {
                         )}
                     >
                         <div className='absolute inset-0 z-20 py-lg'>
-                            <div className='use-max mobile:px-md relative h-full w-full px-lg'>
+                            <div className='use-max relative h-full w-full px-lg mobile:px-md'>
                                 <main className='absolute bottom-0 mb-2'>
-                                    {banner.contents.map(content => (
-                                        <p
-                                            key={content}
-                                            className='mt-8 pr-md mobile:text-4xl font-bold tracking-wider text-bg1 drop-shadow-2xl text-5xl'
-                                        >
-                                            {content}
-                                        </p>
-                                    ))}
+                                    <FadeInAnimation>
+                                        {banner.contents.map(content => (
+                                            <p
+                                                key={content}
+                                                className='mt-8 pr-md text-5xl font-bold tracking-wider text-bg1 drop-shadow-2xl mobile:text-4xl'
+                                            >
+                                                {content}
+                                            </p>
+                                        ))}
+                                    </FadeInAnimation>
                                 </main>
                             </div>
                         </div>
